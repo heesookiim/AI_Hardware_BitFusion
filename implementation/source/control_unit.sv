@@ -88,6 +88,8 @@ module control_unit #(
         mem_wr_en = 1'b0;
         ld_input_done = 1'b0;
         ld_weight_done = 1'b0;
+        next_ld_weight_count = ld_weight_count;
+        next_ld_input_count = ld_input_count;
 
         case (state)
             SETUP : begin
@@ -144,6 +146,27 @@ module control_unit #(
         end
     end
 
+    // always_comb begin : IBUF_COMB
+    //     next_IBUF_0 = IBUF_0;
+    //     next_IBUF_1 = IBUF_1;
+    //     next_IBUF_2 = IBUF_2;
+    //     next_IBUF_3 = IBUF_3;
+
+    //     if (state == LD_INPUT) begin
+    //         next_IBUF_0[ld_input_count] = 8'd11; //mem_data[7:0];
+    //         next_IBUF_1[ld_input_count] = 8'd11; //mem_data[15:8];
+    //         next_IBUF_2[ld_input_count] = 8'd11; //mem_data[23:16];
+    //         next_IBUF_3[ld_input_count] = 8'd11; //mem_data[31:24];
+    //     end
+    // end
+
+    logic [7:0] mem_data_byte0, mem_data_byte1, mem_data_byte2, mem_data_byte3;
+
+    assign mem_data_byte0 = mem_data[7:0];
+    assign mem_data_byte1 = mem_data[15:8];
+    assign mem_data_byte2 = mem_data[23:16];
+    assign mem_data_byte3 = mem_data[31:24];
+
     always_comb begin : IBUF_COMB
         next_IBUF_0 = IBUF_0;
         next_IBUF_1 = IBUF_1;
@@ -151,14 +174,13 @@ module control_unit #(
         next_IBUF_3 = IBUF_3;
 
         if (state == LD_INPUT) begin
-            next_IBUF_0[ld_input_count] = mem_data[7:0];
-            next_IBUF_1[ld_input_count] = mem_data[15:8];
-            next_IBUF_2[ld_input_count] = mem_data[23:16];
-            next_IBUF_3[ld_input_count] = mem_data[31:24];
+            next_IBUF_0[ld_input_count] = mem_data_byte0;
+            next_IBUF_1[ld_input_count] = mem_data_byte1;
+            next_IBUF_2[ld_input_count] = mem_data_byte2;
+            next_IBUF_3[ld_input_count] = mem_data_byte3;
         end
     end
 
-    
     // Moving inputs to PE
     logic [9:0] compute_count, next_compute_count;
 
