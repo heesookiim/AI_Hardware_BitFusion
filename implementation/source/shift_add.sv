@@ -18,11 +18,9 @@ module shift_add (
 
     logic signed [15:0][15:0] shifted_products;
     
-    always_comb begin : SHIFT
-        shifted_products = products;
-        
+    always_comb begin : SHIFT        
         case ({input_bitwidth, weight_bitwidth})
-            {100, 100}: begin     // 8-bit input, 8-bit weight
+            {3'b100, 3'b100}: begin     // 8-bit input, 8-bit weight
                 shifted_products[0] = products[0] <<< 0;
                 shifted_products[1] = products[1] <<< 2;
                 shifted_products[2] = products[2] <<< 4;
@@ -41,7 +39,7 @@ module shift_add (
                 shifted_products[15] = products[15] <<< 12;
             end 
 
-            {100, 010}: begin    // 8-bit input, 4-bit weight
+            {3'b100, 3'b010}: begin    // 8-bit input, 4-bit weight
                 shifted_products[0] = products[0] <<< 0;
                 shifted_products[1] = products[1] <<< 2;
                 shifted_products[2] = products[2] <<< 0;
@@ -60,7 +58,7 @@ module shift_add (
                 shifted_products[15] = products[15] <<< 8;
             end 
 
-            {100, 001}: begin    // 8-bit input, 2-bit weight
+            {3'b100, 3'b001}: begin    // 8-bit input, 2-bit weight
                 shifted_products[0] = products[0] <<< 0;
                 shifted_products[1] = products[1] <<< 0;
                 shifted_products[2] = products[2] <<< 0;
@@ -79,7 +77,7 @@ module shift_add (
                 shifted_products[15] = products[15] <<< 6;
             end
 
-            {010, 100}: begin    // 4-bit input, 8-bit weight
+            {3'b010, 3'b100}: begin    // 4-bit input, 8-bit weight
                 shifted_products[0] = products[0] <<< 0;
                 shifted_products[1] = products[1] <<< 2;
                 shifted_products[2] = products[2] <<< 4;
@@ -96,11 +94,93 @@ module shift_add (
                 shifted_products[13] = products[13] <<< 4;
                 shifted_products[14] = products[14] <<< 6;
                 shifted_products[15] = products[15] <<< 8;
-            end  
-            default: 
+            end
+
+            {3'b010, 3'b010}: begin    // 4-bit input, 4-bit weight
+                shifted_products[0] = products[0] <<< 0;
+                shifted_products[1] = products[1] <<< 2;
+                shifted_products[2] = products[2] <<< 0;
+                shifted_products[3] = products[3] <<< 2;
+                shifted_products[4] = products[4] <<< 2;
+                shifted_products[5] = products[5] <<< 4;
+                shifted_products[6] = products[6] <<< 2;
+                shifted_products[7] = products[7] <<< 4;
+                shifted_products[8] = products[8] <<< 0;
+                shifted_products[9] = products[9] <<< 2;
+                shifted_products[10] = products[10] <<< 0;
+                shifted_products[11] = products[11] <<< 2;
+                shifted_products[12] = products[12] <<< 2;
+                shifted_products[13] = products[13] <<< 4;
+                shifted_products[14] = products[14] <<< 2;
+                shifted_products[15] = products[15] <<< 4;
+            end
+
+            {3'b010, 3'b001}: begin    // 4-bit input, 2-bit weight
+                shifted_products[0] = products[0] <<< 0;
+                shifted_products[1] = products[1] <<< 0;
+                shifted_products[2] = products[2] <<< 0;
+                shifted_products[3] = products[3] <<< 0;
+                shifted_products[4] = products[4] <<< 2;
+                shifted_products[5] = products[5] <<< 2;
+                shifted_products[6] = products[6] <<< 2;
+                shifted_products[7] = products[7] <<< 2;
+                shifted_products[8] = products[8] <<< 0;
+                shifted_products[9] = products[9] <<< 0;
+                shifted_products[10] = products[10] <<< 0;
+                shifted_products[11] = products[11] <<< 0;
+                shifted_products[12] = products[12] <<< 2;
+                shifted_products[13] = products[13] <<< 2;
+                shifted_products[14] = products[14] <<< 2;
+                shifted_products[15] = products[15] <<< 2;
+            end
+
+            {3'b001, 3'b100}: begin    // 2-bit input, 8-bit weight
+                shifted_products[0] = products[0] <<< 0;
+                shifted_products[1] = products[1] <<< 2;
+                shifted_products[2] = products[2] <<< 4;
+                shifted_products[3] = products[3] <<< 6;
+                shifted_products[4] = products[4] <<< 0;
+                shifted_products[5] = products[5] <<< 2;
+                shifted_products[6] = products[6] <<< 4;
+                shifted_products[7] = products[7] <<< 6;
+                shifted_products[8] = products[8] <<< 0;
+                shifted_products[9] = products[9] <<< 2;
+                shifted_products[10] = products[10] <<< 4;
+                shifted_products[11] = products[11] <<< 6;
+                shifted_products[12] = products[12] <<< 0;
+                shifted_products[13] = products[13] <<< 2;
+                shifted_products[14] = products[14] <<< 4;
+                shifted_products[15] = products[15] <<< 6;
+            end
+
+            {3'b001, 3'b010}: begin    // 2-bit input, 4-bit weight
+                shifted_products[0] = products[0] <<< 0;
+                shifted_products[1] = products[1] <<< 2;
+                shifted_products[2] = products[2] <<< 0;
+                shifted_products[3] = products[3] <<< 2;
+                shifted_products[4] = products[4] <<< 0;
+                shifted_products[5] = products[5] <<< 2;
+                shifted_products[6] = products[6] <<< 0;
+                shifted_products[7] = products[7] <<< 2;
+                shifted_products[8] = products[8] <<< 0;
+                shifted_products[9] = products[9] <<< 2;
+                shifted_products[10] = products[10] <<< 0;
+                shifted_products[11] = products[11] <<< 2;
+                shifted_products[12] = products[12] <<< 0;
+                shifted_products[13] = products[13] <<< 2;
+                shifted_products[14] = products[14] <<< 0;
+                shifted_products[15] = products[15] <<< 2;
+            end      
+            default: shifted_products = products;   //2-bit input, 2-bit weight requires no shifting
         endcase
     end
 
-    
-    
+    always_comb begin : ADD
+        shift_add_out = 0;
+
+        for (int i = 0; i < 16; i++) begin
+            shift_add_out += shifted_products[i];
+        end
+    end
+
 endmodule
