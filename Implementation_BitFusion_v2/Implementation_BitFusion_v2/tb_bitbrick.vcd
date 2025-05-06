@@ -1,0 +1,114 @@
+$date
+	Mon May 05 22:38:20 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_bitbrick $end
+$var wire 6 ! p [5:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 1 $ sign_x $end
+$var reg 1 % sign_y $end
+$var reg 2 & x [1:0] $end
+$var reg 2 ' y [1:0] $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 1 $ sign_x $end
+$var wire 1 % sign_y $end
+$var wire 2 ( x [1:0] $end
+$var wire 2 ) y [1:0] $end
+$var wire 3 * in_y [2:0] $end
+$var wire 3 + in_x [2:0] $end
+$var reg 6 , p [5:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+0$
+1#
+0"
+b0 !
+$end
+#5000
+1"
+#10000
+0"
+0#
+#15000
+1"
+#20000
+0"
+#25000
+1"
+#30000
+0"
+b1 +
+b1 &
+b1 (
+#35000
+1"
+#40000
+0"
+b1 *
+b1 '
+b1 )
+b0 +
+b0 &
+b0 (
+#45000
+1"
+#50000
+b1 !
+b1 ,
+0"
+b1 +
+b1 &
+b1 (
+#55000
+1"
+#60000
+b110 !
+b110 ,
+0"
+b11 *
+b11 '
+b11 )
+b10 +
+b10 &
+b10 (
+#65000
+1"
+#70000
+b1001 !
+b1001 ,
+0"
+b11 +
+b11 &
+b11 (
+#75000
+1"
+#80000
+b110 !
+b110 ,
+0"
+b10 *
+b10 '
+b10 )
+#85000
+1"
+#90000
+0"
