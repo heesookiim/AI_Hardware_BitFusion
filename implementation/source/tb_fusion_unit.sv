@@ -208,6 +208,198 @@ module tb_fusion_unit ();
         expected_input_to_right = 32'hffff_aaaa;
         #10
         check_output();
+        
+        //*****************************************************************************
+        // 8-bit input = 127,127, 4-bit weight = 7,7
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = 127,127, 4b weight = 7,7";
+    
+        input_sign = 4'h0;          
+        weight_sign = 4'h0;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b010;
+    
+        input_forward = 32'h55ff_ffff;
+        weight = 32'h7777_7777;
+    
+        expected_psum = 32'd1778;
+        expected_input_to_right = 32'h55ff_ffff;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 8-bit input = -128,-128, 4-bit weight = -8,-8
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = -128,-128,, 4b weight = -8,-8";
+    
+        input_sign = 4'b1010;          
+        weight_sign = 4'b1010;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b010;
+    
+        input_forward = 32'haa00_0000;
+        weight = 32'h8888_8888;
+    
+        expected_psum = 32'd2048;
+        expected_input_to_right = 32'haa00_0000;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 8-bit input = -128,-128, 2-bit weight = 1,1
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = -128,-128, 2b weight = 1,1";
+    
+        input_sign = 4'b1010;          
+        weight_sign = 4'b0000;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b001;
+    
+        input_forward = 32'haa00_0000;
+        weight = 32'h5555_5555;
+    
+        expected_psum = -32'd512;
+        expected_input_to_right = 32'haa00_0000;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 8-bit input = -128,-128, 2-bit weight = -2,-2
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = -128,-128, 2b weight = -2,-2";
+    
+        input_sign = 4'b1010;          
+        weight_sign = 4'b1111;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b001;
+    
+        input_forward = 32'haa00_0000;
+        weight = 32'haaaa_aaaa;
+    
+        expected_psum = 32'd1024;
+        expected_input_to_right = 32'haa00_0000;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 4-bit input = 7,7, 8-bit weight = 127
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "4b input = 7,7, 8b weight = 127";
+    
+        input_sign = 4'b0000;          
+        weight_sign = 4'b0000;
+        input_bitwidth = 3'b010;
+        weight_bitwidth = 3'b100;
+    
+        input_forward = 32'h55ff_55ff;
+        weight = 32'h7f7f_7f7f;
+    
+        expected_psum = 32'd1778;
+        expected_input_to_right = 32'h55ff_55ff;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 4-bit input = 7,7,7,7, 4-bit weight = -8,-8,-8,-8
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "4b input = 7,7,7,7, 4b weight = -8,-8,-8,-8";
+    
+        input_sign = 4'b0000;          
+        weight_sign = 4'b1010;
+        input_bitwidth = 3'b010;
+        weight_bitwidth = 3'b010;
+    
+        input_forward = 32'h55ff_55ff;
+        weight = 32'h8888_8888;
+    
+        expected_psum = -32'd224;
+        expected_input_to_right = 32'h55ff_55ff;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 4-bit input = -8,-8,-8,-8, 2-bit weight = 1,1,1,1,1,1,1,1
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "4b input = -8,-8,-8,-8, 2b weight = 1,1,1,1,1,1,1,1";
+    
+        input_sign = 4'b1010;          
+        weight_sign = 4'b0000;
+        input_bitwidth = 3'b010;
+        weight_bitwidth = 3'b001;
+    
+        input_forward = 32'haa00_aa00;
+        weight = 32'h5555_5555;
+    
+        expected_psum = -32'd64;
+        expected_input_to_right = 32'haa00_aa00;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 2-bit input = 1, 8-bit weight = 127
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "2b input = 1, 8b weight = 127";
+    
+        input_sign = 4'b0000;          
+        weight_sign = 4'b0000;
+        input_bitwidth = 3'b001;
+        weight_bitwidth = 3'b100;
+    
+        input_forward = 32'h5555_5555;
+        weight = 32'h7f7f_7f7f;
+    
+        expected_psum = 32'd508;
+        expected_input_to_right = 32'h5555_5555;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 2-bit input = 1, 4-bit weight = -8
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "2b input = 1, 4b weight = -8";
+    
+        input_sign = 4'b0000;          
+        weight_sign = 4'b1010;
+        input_bitwidth = 3'b001;
+        weight_bitwidth = 3'b010;
+    
+        input_forward = 32'h5555_5555;
+        weight = 32'h8888_8888;
+    
+        expected_psum = -32'd64;
+        expected_input_to_right = 32'h5555_5555;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 2-bit input = 1, 2-bit weight = 1
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "2b input = 1, 2b weight = 1";
+    
+        input_sign = 4'b0000;          
+        weight_sign = 4'b0000;
+        input_bitwidth = 3'b001;
+        weight_bitwidth = 3'b001;
+    
+        input_forward = 32'h5555_5555;
+        weight = 32'h5555_5555;
+    
+        expected_psum = 32'd16;
+        expected_input_to_right = 32'h5555_5555;
+        #10
+        check_output();
+        
+   
 
         $finish;
     end
