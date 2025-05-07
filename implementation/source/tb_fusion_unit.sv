@@ -153,28 +153,61 @@ module tb_fusion_unit ();
         check_output();
         
         //*****************************************************************************
-        // 8-bit input = -128, 8-bit weight = 255
+        // 8-bit input = -128, 8-bit weight = 127
         //*****************************************************************************
         tb_test_case_num += 1;
-        tb_test_case = "8b input = -128, 8b weight = 255";
+        tb_test_case = "8b input = -128, 8b weight = 127";
     
-        input_sign = 4'hf;
+        input_sign = 4'h8;
         weight_sign = 4'h0;
         input_bitwidth = 3'b100;
         weight_bitwidth = 3'b100;
     
-        input_forward = 32'haaaa_0000;
-        weight = 32'hffff_ffff;
+        input_forward = 32'haa00_0000;
+        weight = 32'h7f7f_7f7f;
     
-        expected_psum = -32'd32640;
-        expected_input_to_right = 32'haaaa_0000;
+        expected_psum = -32'd16256;
+        expected_input_to_right = 32'haa00_0000;
         #10
         check_output();
-       
-           
-     
-
         
+        //*****************************************************************************
+        // 8-bit input = 127, 8-bit weight = -128
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = 127, 8b weight = -128";
+    
+        input_sign = 4'h0;
+        weight_sign = 4'h8;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b100;
+    
+        weight = 32'h8080_8080;
+        input_forward = 32'h55ff_ffff;
+    
+        expected_psum = -32'd16256;
+        expected_input_to_right = 32'h55ff_ffff;
+        #10
+        check_output();
+        
+        //*****************************************************************************
+        // 8-bit input = -6, 8-bit weight = 3
+        //*****************************************************************************
+        tb_test_case_num += 1;
+        tb_test_case = "8b input = -6, 8b weight = 3";
+    
+        input_sign = 4'h8;          // only top 2 bits are negative
+        weight_sign = 4'h0;
+        input_bitwidth = 3'b100;
+        weight_bitwidth = 3'b100;
+    
+        input_forward = 32'hffff_aaaa;
+        weight = 32'h0303_0303;
+    
+        expected_psum = -32'd18;
+        expected_input_to_right = 32'hffff_aaaa;
+        #10
+        check_output();
 
         $finish;
     end

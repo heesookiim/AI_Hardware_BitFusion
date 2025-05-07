@@ -1,7 +1,7 @@
 module shift_add (
     input logic [2:0] input_bitwidth, weight_bitwidth, // 001 - 2bits, 010 - 4bits, 100 - 8bits
     input logic signed [15:0][5:0] products,
-    output logic [31:0] shift_add_out
+    output logic signed [31:0] shift_add_out
 );
     
     // integer row, col, i, j;
@@ -21,22 +21,22 @@ module shift_add (
     always_comb begin : SHIFT        
         case ({input_bitwidth, weight_bitwidth})
             {3'b100, 3'b100}: begin     // 8-bit input, 8-bit weight
-                shifted_products[0] = products[0] <<< 0;
-                shifted_products[1] = products[1] <<< 2;
-                shifted_products[2] = products[2] <<< 4;
-                shifted_products[3] = products[3] <<< 6;
-                shifted_products[4] = products[4] <<< 2;
-                shifted_products[5] = products[5] <<< 4;
-                shifted_products[6] = products[6] <<< 6;
-                shifted_products[7] = products[7] <<< 8;
-                shifted_products[8] = products[8] <<< 4;
-                shifted_products[9] = products[9] <<< 6;
-                shifted_products[10] = products[10] <<< 8;
-                shifted_products[11] = products[11] <<< 10;
-                shifted_products[12] = products[12] <<< 6;
-                shifted_products[13] = products[13] <<< 8;
-                shifted_products[14] = products[14] <<< 10;
-                shifted_products[15] = products[15] <<< 12;
+                shifted_products[0] = $signed(products[0]) <<< 0;
+                shifted_products[1] = $signed(products[1]) <<< 2;
+                shifted_products[2] = $signed(products[2]) <<< 4;
+                shifted_products[3] = $signed(products[3]) <<< 6;
+                shifted_products[4] = $signed(products[4]) <<< 2;
+                shifted_products[5] = $signed(products[5]) <<< 4;
+                shifted_products[6] = $signed(products[6]) <<< 6;
+                shifted_products[7] = $signed(products[7]) <<< 8;
+                shifted_products[8] = $signed(products[8]) <<< 4;
+                shifted_products[9] = $signed(products[9]) <<< 6;
+                shifted_products[10] = $signed(products[10]) <<< 8;
+                shifted_products[11] = $signed(products[11]) <<< 10;
+                shifted_products[12] = $signed(products[12]) <<< 6;
+                shifted_products[13] = $signed(products[13]) <<< 8;
+                shifted_products[14] = $signed(products[14]) <<< 10;
+                shifted_products[15] = $signed(products[15]) <<< 12;
             end 
 
             {3'b100, 3'b010}: begin    // 8-bit input, 4-bit weight
@@ -179,7 +179,7 @@ module shift_add (
         shift_add_out = 0;
 
         for (int i = 0; i < 16; i++) begin
-            shift_add_out = shift_add_out + shifted_products[i];
+            shift_add_out = $signed(shift_add_out) + $signed(shifted_products[i]);
         end
     end
 
