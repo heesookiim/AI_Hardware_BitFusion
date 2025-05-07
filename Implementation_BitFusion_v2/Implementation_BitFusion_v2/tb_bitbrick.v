@@ -1,3 +1,4 @@
+`include "bitbrick.v"
 `timescale 1ns / 1ps
 
 module tb_bitbrick;
@@ -60,15 +61,24 @@ module tb_bitbrick;
         #10;
 
         // Test case 5: x = 2'b10, y = 2'b11 (Product should be -6)
+        sign_x = 1;
         x = 2'b10; y = 2'b11;
         #10;
 
-        // Test case 6: x = 2'b11, y = 2'b11 (Product should be 6)
+        // Test case 6: x = 2'b11, y = 2'b11 (Product should be 9)
+        sign_x = 0;
         x = 2'b11; y = 2'b11;
         #10;
 
         // Test case 7: x = 2'b11, y = 2'b10 (Product should be -6)
+        sign_y = 1;
         x = 2'b11; y = 2'b10;
+        #10;
+
+        // Test case 8: x = 2'b11, y = 2'b11 (Product should be 1)
+        sign_x = 1;
+        sign_y = 1;
+        x = 2'b11; y = 2'b11;
         #10;
 
         // Finish simulation

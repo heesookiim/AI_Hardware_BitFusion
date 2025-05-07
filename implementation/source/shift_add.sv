@@ -1,7 +1,7 @@
 module shift_add (
     input logic [2:0] input_bitwidth, weight_bitwidth, // 001 - 2bits, 010 - 4bits, 100 - 8bits
-    input logic signed [5:0][15:0] products,
-    output logic signed [31:0] shift_add_out
+    input logic signed [15:0][5:0] products,
+    output logic [31:0] shift_add_out
 );
     
     // integer row, col, i, j;
@@ -16,7 +16,7 @@ module shift_add (
     //     end
     // end
 
-    logic signed [15:0][15:0] shifted_products;
+    logic signed [15:0][20:0] shifted_products;
     
     always_comb begin : SHIFT        
         case ({input_bitwidth, weight_bitwidth})
@@ -179,7 +179,7 @@ module shift_add (
         shift_add_out = 0;
 
         for (int i = 0; i < 16; i++) begin
-            shift_add_out += shifted_products[i];
+            shift_add_out = shift_add_out + shifted_products[i];
         end
     end
 
