@@ -22,7 +22,7 @@ module bitfusion #(
             input_forward_reg <= next_input_forward_reg;
         end
     end
-    assign next_input_forward_reg = input_forward_reg;
+    // assign next_input_forward_reg = input_forward_reg;
 
     // partial sum registers
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] psums, next_psums;
@@ -36,7 +36,7 @@ module bitfusion #(
             psums <= next_psums;
         end
     end
-    assign next_psums = psums;
+    // assign next_psums = psums;
 
     // input and weight mux outs
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] weight_mux_outs;
