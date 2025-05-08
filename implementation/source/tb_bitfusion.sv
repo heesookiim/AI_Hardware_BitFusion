@@ -1,0 +1,174 @@
+module tb_bitfusion ();
+    
+    parameter PERIOD = 10;
+    parameter ARRAY_SIZE = 2;
+    parameter DATA_W = 32;
+
+    logic clk = 0, nRST;
+
+    // clock
+    always #(PERIOD/2) clk++;
+
+    //*****************************************************************************
+    // Declare TB Signals
+    //*****************************************************************************
+    integer tb_test_case_num;
+    integer i, j;
+    string tb_test_case;
+    logic tb_mismatch;
+
+    // expected value signals
+    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] expected_OBUF;
+    
+    //*****************************************************************************
+    // Declare DUT Signals
+    //*****************************************************************************
+    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF;
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF;
+    logic [ARRAY_SIZE - 1:0] input_rd_en, acc_clear;
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0] weight_rd_en;
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][3:0] input_sign;
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][3:0] weight_sign;
+    logic [2:0] input_bitwidth, weight_bitwidth;
+    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] OBUF;
+
+    //*****************************************************************************
+    // DUT Instance
+    //*****************************************************************************
+    bitfusion #(.ARRAY_SIZE(ARRAY_SIZE), .DATA_W(DATA_W)) DUT (
+        .clk(clk), .nRST(nRST),
+        .IBUF(IBUF), .WBUF(WBUF),
+        .input_rd_en(input_rd_en), .weight_rd_en(weight_rd_en), .acc_clear(acc_clear),
+        .input_sign(input_sign), .weight_sign(weight_sign),
+        .input_bitwidth(input_bitwidth), .weight_bitwidth(weight_bitwidth),
+        .OBUF(OBUF)
+    );
+
+    //*****************************************************************************
+    // Declare TB tasks
+    //*****************************************************************************
+    task check_output;
+        begin
+            tb_mismatch = 1'b0;
+            
+            if (expected_OBUF == OBUF) begin
+                $display("Correct 'OBUF' output = %d during %s test case. Expected OBUF = %d", OBUF, tb_test_case, expected_OBUF);
+            end
+            else begin
+                tb_mismatch = 1'b1;
+                $display("Incorrect 'OBUF' output = %d during %s test case. Expected psum = %d", OBUF, tb_test_case, expected_OBUF);
+            end
+        end
+    endtask
+
+    task reset_dut;
+        begin
+            // Activate the reset
+            nRST = 1'b0;
+
+            // Maintain the reset for more than one cycle
+            @(posedge clk);
+            @(posedge clk);
+
+            // Wait until safely away from rising edge of the clock before releasing
+            @(negedge clk);
+            nRST = 1'b1;
+
+            /*
+            // Leave out of reset for a couple cycles before allowing other stimulus
+            // Wait for negative clock edges, 
+            // since inputs to DUT should normally be applied away from rising clock edges
+            @(negedge clk);
+            @(negedge clk);
+            */
+        end
+    endtask
+
+
+    //*****************************************************************************
+    //*****************************************************************************
+    // Main TB Process
+    //*****************************************************************************
+    //*****************************************************************************
+    initial begin
+        $dumpfile("bitfusion.vcd");
+        $dumpvars(0,tb_bitfusion);
+
+        // Initiliaze values
+        tb_test_case = "Initialization";
+        tb_test_case_num = -1;
+        nRST = 1;
+        IBUF = '0;
+        WBUF = '0;
+        input_rd_en = '0;
+        weight_rd_en = '0;
+        acc_clear = '0;
+        input_bitwidth = '0;
+        weight_bitwidth = '0;
+        input_sign = '0;
+        weight_sign = '0;
+
+        //*****************************************************************************
+        // Reset DUT
+        //*****************************************************************************
+        reset_dut();
+
+        //*****************************************************************************
+        // 2b x 2b. Systolic array is 2 x 2
+        //*****************************************************************************
+        // 2b inputs, 2b weights
+        input_bitwidth  = 3'b001;
+        weight_bitwidth = 3'b001;
+        
+        // fill buffers with 1s
+        IBUF[0] = 32'h5555_5555;
+        IBUF[1] = 32'h5555_5555;
+        WBUF[0][0] = 32'h5555_5555;
+        WBUF[0][1] = 32'h5555_5555;
+        WBUF[1][0] = 32'h5555_5555;
+        WBUF[1][1] = 32'h5555_5555;        
+
+        // apply inputs on negative edge
+        @(negedge clk);
+        input_rd_en[0] = 1'b1;
+        weight_rd_en[0][0] = 1'b1;
+        
+        @(posedge clk);
+        
+        @(negedge clk);
+        //input_rd_en[0] = 1'b0;
+        IBUF[0] = '0;
+        input_rd_en[1] = 1'b1;
+        //weight_rd_en[0][0] = 1'b0;
+        WBUF[0][0] = '0;
+        weight_rd_en[0][1] = 1'b1;
+        weight_rd_en[1][0] = 1'b1;
+        weight_rd_en[1][1] = 1'b0;
+        
+        @(posedge clk);
+        
+        @(negedge clk);
+        //input_rd_en[0] = 1'b0;
+        //input_rd_en[1] = 1'b0;
+        IBUF[1] = '0;
+        //weight_rd_en[0][1] = 1'b0;
+        WBUF[0][1] = '0;
+        //weight_rd_en[0][0] = 1'b0;
+        //weight_rd_en[1][0] = 1'b0;
+        WBUF[1][0] = '0;
+        weight_rd_en[1][1] = 1'b1;
+        
+        @(posedge clk);
+        
+        @(negedge clk);
+        //weight_rd_en[1][1] = 1'b0;
+        WBUF[1][1] = '0;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        
+
+        $finish;
+    end
+endmodule

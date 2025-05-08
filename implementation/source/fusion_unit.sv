@@ -1,11 +1,12 @@
-`include "bit_brick.sv"
-`include "shift_add.sv"
+//`include "bit_brick.sv"
+//`include "shift_add.sv"
 
 module fusion_unit (
     input logic clk, nRST,
     input logic [2:0] input_bitwidth, weight_bitwidth,
     input logic [3:0] input_sign, weight_sign,
     input logic [31:0] input_forward, weight,
+    input logic [31:0] psum_in,
     output logic [31:0] psum, input_to_right
 );
 
@@ -38,17 +39,17 @@ module fusion_unit (
         .shift_add_out(shift_add_out)
     );
 
-    // psum(down) and input_to_right registers
-    // always_ff @(posedge clk, negedge nRST) begin : OUTPUT_REGISTERS
-    //     if (!nRST) begin
-    //         psum <= '0;
-    //     end
-    //     else begin
-    //         psum <= shift_add_out;
-    //     end
-    // end
+    // psum(down) register
+//    always_ff @(posedge clk, negedge nRST) begin : OUTPUT_REGISTERS
+//         if (!nRST) begin
+//             psum <= '0;
+//         end
+//         else begin
+//             psum <= shift_add_out;
+//         end
+//     end
 
     // outputs
-    assign psum = shift_add_out;
+    assign psum = $signed(shift_add_out) + $signed(psum_in);
     assign input_to_right = input_forward;
 endmodule
