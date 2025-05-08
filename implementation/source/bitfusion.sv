@@ -2,8 +2,11 @@ module bitfusion #(
     parameter ARRAY_SIZE = 4, DATA_W = 32
 )(
     input logic clk, nRST,
-    input logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF,
-    input logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF,
+//    input logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF,
+//    input logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF,
+    input logic [DATA_W - 1:0] data_in,
+    input logic [ARRAY_SIZE - 1:0] IBUF_wr_en,
+    input logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0] WBUF_wr_en,
     input logic [ARRAY_SIZE - 1:0] input_rd_en, acc_clear,
     input logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0] weight_rd_en,
     input logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][3:0] input_sign,
@@ -11,7 +14,7 @@ module bitfusion #(
     input logic [2:0] input_bitwidth, weight_bitwidth,
     output logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] OBUF
 );
-
+    
     // input forward registers. rows = ARRAY_SIZE, columns = ARRAY_SIZE - 1
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 2:0][DATA_W - 1:0] input_forward_reg, next_input_forward_reg;
     always_ff @(posedge clk, negedge nRST) begin : INPUT_FORWARD_REG_LOGIC
@@ -22,7 +25,7 @@ module bitfusion #(
             input_forward_reg <= next_input_forward_reg;
         end
     end
-    // assign next_input_forward_reg = input_forward_reg;
+    //assign next_input_forward_reg = input_forward_reg;
 
     // partial sum registers
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] psums, next_psums;
@@ -36,32 +39,51 @@ module bitfusion #(
             psums <= next_psums;
         end
     end
-    // assign next_psums = psums;
+    //assign next_psums = psums;
 
     // input and weight mux outs
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] weight_mux_outs;
     logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] input_mux_outs;
     
+     ////// IBUF ////////
+    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF_data_out;
+    
+    ////// WBUF ////////
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF_data_out;
 
     genvar i, j, k;
     generate
         for (i = 0; i < ARRAY_SIZE; i = i + 1) begin
             for (j = 0; j < ARRAY_SIZE; j = j + 1) begin
-
+                
+                // instantiate WBUFs
+                WBUF #(.ARRAY_SIZE(ARRAY_SIZE), .DATA_W(DATA_W)) WBUFs (
+                    .clk(clk), .nRST(nRST),
+                    .WBUF_wr_en(WBUF_wr_en[i][j]),
+                    .WBUF_data_in(data_in),
+                    .WBUF_data_out(WBUF_data_out[i][j])
+                );
                 // instantiate weight mux registers    
                 w_mux wmux (
                     .clk(clk), .nRST(nRST),
                     .rd_en(weight_rd_en[i][j]), .input_bitwidth(input_bitwidth),
-                    .data_in(WBUF[i][j]), .data_out(weight_mux_outs[i][j])
+                    .data_in(WBUF_data_out[i][j]), .data_out(weight_mux_outs[i][j])
                 );
 
                 // for each row
+                // for each row instantiate an IBUF
                 if (j % ARRAY_SIZE == 0) begin
+                    IBUF #(.ARRAY_SIZE(ARRAY_SIZE), .DATA_W(DATA_W)) IBUFs (
+                    .clk(clk), .nRST(nRST),
+                    .IBUF_wr_en(IBUF_wr_en[i]),
+                    .IBUF_data_in(data_in),
+                    .IBUF_data_out(IBUF_data_out[i])
+                );
                     // for each row instantiate an input mux register
                     in_mux imux (
                         .clk(clk), .nRST(nRST),
                         .rd_en(input_rd_en[i]), .weight_bitwidth(weight_bitwidth),
-                        .data_in(IBUF[i]), .data_out(input_mux_outs[i])
+                        .data_in(IBUF_data_out[i]), .data_out(input_mux_outs[i])
                     );
                     // for each row connect 1st column fusion unit to input mux reg
                     if (i == 0) begin

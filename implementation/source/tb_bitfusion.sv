@@ -23,8 +23,11 @@ module tb_bitfusion ();
     //*****************************************************************************
     // Declare DUT Signals
     //*****************************************************************************
-    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF;
-    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF;
+    //    logic [ARRAY_SIZE - 1:0][DATA_W - 1:0] IBUF;
+    //    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][DATA_W - 1:0] WBUF;
+    logic [DATA_W - 1:0] data_in;
+    logic [ARRAY_SIZE - 1:0] IBUF_wr_en;
+    logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0] WBUF_wr_en;
     logic [ARRAY_SIZE - 1:0] input_rd_en, acc_clear;
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0] weight_rd_en;
     logic [ARRAY_SIZE - 1:0][ARRAY_SIZE - 1:0][3:0] input_sign;
@@ -37,7 +40,9 @@ module tb_bitfusion ();
     //*****************************************************************************
     bitfusion #(.ARRAY_SIZE(ARRAY_SIZE), .DATA_W(DATA_W)) DUT (
         .clk(clk), .nRST(nRST),
-        .IBUF(IBUF), .WBUF(WBUF),
+        //.IBUF(IBUF), .WBUF(WBUF),
+        .data_in(data_in),
+        .IBUF_wr_en(IBUF_wr_en), .WBUF_wr_en(WBUF_wr_en),
         .input_rd_en(input_rd_en), .weight_rd_en(weight_rd_en), .acc_clear(acc_clear),
         .input_sign(input_sign), .weight_sign(weight_sign),
         .input_bitwidth(input_bitwidth), .weight_bitwidth(weight_bitwidth),
@@ -105,8 +110,9 @@ module tb_bitfusion ();
         tb_test_case_num = -1;
         i = 0;
         nRST = 1;
-        IBUF = '0;
-        WBUF = '0;
+        data_in = '0;
+        IBUF_wr_en = '0;
+        WBUF_wr_en = '0;
         input_rd_en = '0;
         weight_rd_en = '0;
         acc_clear = '0;
@@ -183,16 +189,34 @@ module tb_bitfusion ();
         weight_bitwidth = 3'b010;
 
         // fill buffers
-        IBUF[0] = 32'h7f7f_7f7f;    // all 4 8b values are 127
-        IBUF[1] = 32'h7f7f_7f7f;    // all 4 8b values are 127
-        WBUF[0][0] = 32'h7777_7777; // all 8 4b values are 7
-        WBUF[0][1] = 32'h7777_7777; // all 8 4b values are 7
-        WBUF[1][0] = 32'h7777_7777; // all 8 4b values are 7
-        WBUF[1][1] = 32'h7777_7777; // all 8 4b values are 7
-
+//        IBUF[0] = 32'h7f7f_7f7f;    // all 4 8b values are 127
+//        IBUF[1] = 32'h7f7f_7f7f;    // all 4 8b values are 127
+        @(negedge clk);
+        data_in = 32'h7f7f_7f7f;    // all 4 8b values are 127
+        IBUF_wr_en = 2'b11;
+        
+        @(posedge clk);
+        
+        @(negedge clk);
+        // turn off IBUF write
+        IBUF_wr_en = 2'b00;
+        
+        // WBUF[0][0] = 32'h7777_7777; // all 8 4b values are 7
+        // WBUF[0][1] = 32'h7777_7777; // all 8 4b values are 7
+        // WBUF[1][0] = 32'h7777_7777; // all 8 4b values are 7
+        // WBUF[1][1] = 32'h7777_7777; // all 8 4b values are 7
+        data_in = 32'h7777_7777;
+        WBUF_wr_en = 4'hf;
+        
+        
+        
+        @(posedge clk);
         // FU[0][0] is on
         // IBUF[0] [15:0] used, WBUF[0][0] [7:0] used 
         @(negedge clk);
+        // turn off WBUF write
+        WBUF_wr_en = 4'h0;
+        
         input_rd_en[0] = 1'b1;
         weight_rd_en[0][0] = 1'b1;
         
@@ -220,8 +244,8 @@ module tb_bitfusion ();
         // FU[0][0] is off
         input_rd_en[0] = 1'b0;
         weight_rd_en[0][0] = 1'b0;
-        IBUF[0] = '0;
-        WBUF[0][0] = '0;
+//        IBUF[0] = '0;
+//        WBUF[0][0] = '0;
         // IBUF[1] [31:16] used, WBUF[1][0] [15:8] used in FU[1][0]
         input_rd_en[1] = 1'b1;
         weight_rd_en[1][0] = 1'b1;
@@ -238,12 +262,12 @@ module tb_bitfusion ();
         print_obuf();
         //  FU[0][1] is off
         weight_rd_en[0][1] = 1'b0;
-        WBUF[0][1] = '0;
+        // WBUF[0][1] = '0;
         //  FU[1][0] is off
         input_rd_en[1] = 1'b0;
         weight_rd_en[1][0] = 1'b0;
-        IBUF[1] = '0;
-        WBUF[0][1] = '0;
+        // IBUF[1] = '0;
+        // WBUF[0][1] = '0;
         // IBUF[1] [31:16] used, WBUF[1][1] [15:8] used in FU[1][1]
         weight_rd_en[1][1] = 1'b1;
     
@@ -255,7 +279,7 @@ module tb_bitfusion ();
         print_obuf();
         // FU[1][1] is off
         weight_rd_en[1][1] = 1'b0;
-        WBUF[1][1] = '0;
+        // WBUF[1][1] = '0;
         
         @(posedge clk);
         i = i + 1;
