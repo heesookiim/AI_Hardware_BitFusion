@@ -113,13 +113,15 @@ module bitfusion #(
                         .psum_in(32'h0), .psum(next_psums[i][j]), .input_to_right(next_input_forward_reg[i][j])
                     );
                     end
-                    fusion_unit fu (
-                        .clk(clk), .nRST(nRST),
-                        .input_bitwidth(input_bitwidth), .weight_bitwidth(weight_bitwidth),
-                        .input_sign(input_sign[i][j]), .weight_sign(weight_sign[i][j]),
-                        .input_forward(input_forward_reg[i][j - 1]), .weight(weight_mux_outs[i][j]),
-                        .psum_in(psums[i-1][j]), .psum(next_psums[i][j]), .input_to_right(next_input_forward_reg[i][j])
-                    );
+                    else begin
+                        fusion_unit fu (
+                            .clk(clk), .nRST(nRST),
+                            .input_bitwidth(input_bitwidth), .weight_bitwidth(weight_bitwidth),
+                            .input_sign(input_sign[i][j]), .weight_sign(weight_sign[i][j]),
+                            .input_forward(input_forward_reg[i][j - 1]), .weight(weight_mux_outs[i][j]),
+                            .psum_in(psums[i-1][j]), .psum(next_psums[i][j]), .input_to_right(next_input_forward_reg[i][j])
+                        );
+                    end
                 end                   
             end
         end
