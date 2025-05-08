@@ -84,6 +84,12 @@ module tb_bitfusion ();
         end
     endtask
 
+    task  print_obuf;
+        begin
+            $display("Cycle %d    OBUF[0] = %d    OBUF[1] = %d", i, OBUF[0], OBUF[1]);
+        end
+    endtask //
+
 
     //*****************************************************************************
     //*****************************************************************************
@@ -97,6 +103,7 @@ module tb_bitfusion ();
         // Initiliaze values
         tb_test_case = "Initialization";
         tb_test_case_num = -1;
+        i = 0;
         nRST = 1;
         IBUF = '0;
         WBUF = '0;
@@ -116,58 +123,170 @@ module tb_bitfusion ();
         //*****************************************************************************
         // 2b x 2b. Systolic array is 2 x 2
         //*****************************************************************************
-        // 2b inputs, 2b weights
-        input_bitwidth  = 3'b001;
-        weight_bitwidth = 3'b001;
+        // // 2b inputs, 2b weights
+        // input_bitwidth  = 3'b001;
+        // weight_bitwidth = 3'b001;
         
-        // fill buffers with 1s
-        IBUF[0] = 32'h5555_5555;
-        IBUF[1] = 32'h5555_5555;
-        WBUF[0][0] = 32'h5555_5555;
-        WBUF[0][1] = 32'h5555_5555;
-        WBUF[1][0] = 32'h5555_5555;
-        WBUF[1][1] = 32'h5555_5555;        
+        // // fill buffers with 1s
+        // IBUF[0] = 32'h5555_5555;
+        // IBUF[1] = 32'h5555_5555;
+        // WBUF[0][0] = 32'h5555_5555;
+        // WBUF[0][1] = 32'h5555_5555;
+        // WBUF[1][0] = 32'h5555_5555;
+        // WBUF[1][1] = 32'h5555_5555;        
 
-        // apply inputs on negative edge
+        // // apply inputs on negative edge
+        // @(negedge clk);
+        // input_rd_en[0] = 1'b1;
+        // weight_rd_en[0][0] = 1'b1;
+        
+        // @(posedge clk);
+        
+        // @(negedge clk);
+        // //input_rd_en[0] = 1'b0;
+        // IBUF[0] = '0;
+        // input_rd_en[1] = 1'b1;
+        // //weight_rd_en[0][0] = 1'b0;
+        // WBUF[0][0] = '0;
+        // weight_rd_en[0][1] = 1'b1;
+        // weight_rd_en[1][0] = 1'b1;
+        // weight_rd_en[1][1] = 1'b0;
+        
+        // @(posedge clk);
+        
+        // @(negedge clk);
+        // //input_rd_en[0] = 1'b0;
+        // //input_rd_en[1] = 1'b0;
+        // IBUF[1] = '0;
+        // //weight_rd_en[0][1] = 1'b0;
+        // WBUF[0][1] = '0;
+        // //weight_rd_en[0][0] = 1'b0;
+        // //weight_rd_en[1][0] = 1'b0;
+        // WBUF[1][0] = '0;
+        // weight_rd_en[1][1] = 1'b1;
+        
+        // @(posedge clk);
+        
+        // @(negedge clk);
+        // //weight_rd_en[1][1] = 1'b0;
+        // WBUF[1][1] = '0;
+        // @(posedge clk);
+        // @(posedge clk);
+        // @(posedge clk);
+        // @(posedge clk);
+        
+        //*****************************************************************************
+        // 8b x 4b. Systolic array is 2 x 2
+        //*****************************************************************************
+        // 8b inputs, 4b weights
+        input_bitwidth  = 3'b100;
+        weight_bitwidth = 3'b010;
+
+        // fill buffers
+        IBUF[0] = 32'h7f7f_7f7f;    // all 4 8b values are 127
+        IBUF[1] = 32'h7f7f_7f7f;    // all 4 8b values are 127
+        WBUF[0][0] = 32'h7777_7777; // all 8 4b values are 7
+        WBUF[0][1] = 32'h7777_7777; // all 8 4b values are 7
+        WBUF[1][0] = 32'h7777_7777; // all 8 4b values are 7
+        WBUF[1][1] = 32'h7777_7777; // all 8 4b values are 7
+
+        // FU[0][0] is on
+        // IBUF[0] [15:0] used, WBUF[0][0] [7:0] used 
         @(negedge clk);
         input_rd_en[0] = 1'b1;
         weight_rd_en[0][0] = 1'b1;
         
         @(posedge clk);
+        i = i + 1;
         
+        ////// FU[0][0], FU[0][1], FU[1][0] on //////
         @(negedge clk);
-        //input_rd_en[0] = 1'b0;
-        IBUF[0] = '0;
+        print_obuf();
+        // IBUF[0] [31:16] used, WBUF[0][0] [15:8] used in FU[0][0]
+        input_rd_en[0] = 1'b1;
+        weight_rd_en[0][0] = 1'b1;
+        // IBUF[1] [15:0] used, WBUF[1][0] [7:0] used in FU[1][0]
         input_rd_en[1] = 1'b1;
-        //weight_rd_en[0][0] = 1'b0;
-        WBUF[0][0] = '0;
-        weight_rd_en[0][1] = 1'b1;
         weight_rd_en[1][0] = 1'b1;
-        weight_rd_en[1][1] = 1'b0;
-        
+        // IBUF[0] [15:0] used, WBUF[0][1] [7:0] used in F[0][1]
+        weight_rd_en[0][1] = 1'b1;
+       
         @(posedge clk);
+        i = i + 1;
         
+        ////// FU[0][1], FU[1][0], FU[1][1] on //////
         @(negedge clk);
-        //input_rd_en[0] = 1'b0;
-        //input_rd_en[1] = 1'b0;
-        IBUF[1] = '0;
-        //weight_rd_en[0][1] = 1'b0;
-        WBUF[0][1] = '0;
-        //weight_rd_en[0][0] = 1'b0;
-        //weight_rd_en[1][0] = 1'b0;
-        WBUF[1][0] = '0;
+        print_obuf();
+        // FU[0][0] is off
+        input_rd_en[0] = 1'b0;
+        weight_rd_en[0][0] = 1'b0;
+        IBUF[0] = '0;
+        WBUF[0][0] = '0;
+        // IBUF[1] [31:16] used, WBUF[1][0] [15:8] used in FU[1][0]
+        input_rd_en[1] = 1'b1;
+        weight_rd_en[1][0] = 1'b1;
+        // IBUF[0] [31:16] used, WBUF[0][1] [15:8] used in F[0][1]
+        weight_rd_en[0][1] = 1'b1;
+        // IBUF[1] [15:0] used, WBUF[1][1] [7:0] used in FU[1][1]
         weight_rd_en[1][1] = 1'b1;
+
+        @(posedge clk);
+        i = i + 1;
+        
+        ////// FU[1][1] on //////
+        @(negedge clk);
+        print_obuf();
+        //  FU[0][1] is off
+        weight_rd_en[0][1] = 1'b0;
+        WBUF[0][1] = '0;
+        //  FU[1][0] is off
+        input_rd_en[1] = 1'b0;
+        weight_rd_en[1][0] = 1'b0;
+        IBUF[1] = '0;
+        WBUF[0][1] = '0;
+        // IBUF[1] [31:16] used, WBUF[1][1] [15:8] used in FU[1][1]
+        weight_rd_en[1][1] = 1'b1;
+    
+        @(posedge clk);
+        i = i + 1;
+        
+        ////// All off //////
+        @(negedge clk);
+        print_obuf();
+        // FU[1][1] is off
+        weight_rd_en[1][1] = 1'b0;
+        WBUF[1][1] = '0;
         
         @(posedge clk);
+        i = i + 1;
         
         @(negedge clk);
-        //weight_rd_en[1][1] = 1'b0;
-        WBUF[1][1] = '0;
+        print_obuf();
+
         @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
+        i = i + 1;
         
+        @(negedge clk);
+        print_obuf();
+
+        @(posedge clk);
+        i = i + 1;
+        
+        @(negedge clk);
+        print_obuf();
+        
+        @(posedge clk);
+        i = i + 1;
+        
+        @(negedge clk);
+        print_obuf();
+        
+        @(posedge clk);
+        i = i + 1;
+        
+        @(negedge clk);
+        print_obuf();
+
 
         $finish;
     end

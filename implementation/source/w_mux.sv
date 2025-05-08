@@ -48,7 +48,7 @@ module w_mux (
     end
 
     always_comb begin : NEXT_DATA_OUT_LOGIC
-        next_data_out = data_out;
+        next_data_out = '0;
         
         if (rd_en == 1'b1) begin
             case (input_bitwidth)

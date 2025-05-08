@@ -48,7 +48,7 @@ module in_mux (
     end
 
     always_comb begin : NEXT_DATA_OUT_LOGIC
-        next_data_out = data_out;
+        next_data_out = '0;
         
         if (rd_en == 1'b1) begin
             case (weight_bitwidth)
@@ -63,8 +63,9 @@ module in_mux (
 
                 {3'b010}: begin
                     case (rd_ptr)
-                        {2'd0}: next_data_out = {{2{data_in[15:14]}}, {2{data_in[11:10]}}, {2{data_in[13:12]}}, {2{data_in[9:8]}}, {2{data_in[7:6]}}, {2{data_in[5:4]}}, {2{data_in[3:2]}}, {2{data_in[1:0]}}};
-                        {2'd1}: next_data_out = {{2{data_in[31:30]}}, {2{data_in[27:26]}}, {2{data_in[29:28]}}, {2{data_in[25:24]}}, {2{data_in[23:22]}}, {2{data_in[21:20]}}, {2{data_in[19:18]}}, {2{data_in[17:16]}}};
+                        // {2'd0}: next_data_out = {{2{data_in[15:14]}}, {2{data_in[13:12]}},  {2{data_in[11:10]}}, {2{data_in[9:8]}}, {2{data_in[7:6]}}, {2{data_in[5:4]}}, {2{data_in[3:2]}}, {2{data_in[1:0]}}};
+                        {2'd0}: next_data_out = {{2{data_in[15:14]}}, {2{data_in[7:6]}}, {2{data_in[13:12]}}, {2{data_in[5:4]}}, {2{data_in[11:10]}}, {2{data_in[3:2]}}, {2{data_in[9:8]}}, {2{data_in[1:0]}}};
+                        {2'd1}: next_data_out = {{2{data_in[31:30]}}, {2{data_in[23:22]}}, {2{data_in[29:28]}}, {2{data_in[21:20]}}, {2{data_in[27:26]}}, {2{data_in[19:18]}}, {2{data_in[25:24]}}, {2{data_in[17:16]}}};
                     endcase
                 end
 
