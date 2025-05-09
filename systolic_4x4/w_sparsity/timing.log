@@ -1,0 +1,317 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'bitfusion' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : bitfusion
+Version: P-2019.03-SP5-6
+Date   : Thu May  8 20:10:00 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NC1D0COM   Library: tcbn65lptc1d0_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: weight_bitwidth[1]
+              (input port)
+  Endpoint: psums_reg[0][1][31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  shift_add_14       ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_13       ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_12       ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_11       ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_10       ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_9        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_8        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_7        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_6        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_5        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_4        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_3        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_2        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_1        ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_0        ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_13     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_12     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_11     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_10     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_9      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_8      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_7      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_6      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_5      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_4      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_3      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_2      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_1      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_0      ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_2           ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_1           ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_0           ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_15       ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_14     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_15     ZeroWireload          tcbn65lptc1d0_ccs
+  bitfusion          ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_3           ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_14_DW01_add_3_DW01_add_233
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_14_DW01_add_1_DW01_add_231
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  shift_add_14_DW01_add_0_DW01_add_230
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_14_DW01_add_0_DW01_add_18
+                     ZeroWireload          tcbn65lptc1d0_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  weight_bitwidth[1] (in)                                 0.00       0.00 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/weight_bitwidth[1] (fusion_unit_14)
+                                                          0.00       0.00 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/weight_bitwidth[1] (shift_add_14)
+                                                          0.00       0.00 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U455/ZN (INR3D0)
+                                                          0.13       0.13 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U39/ZN (CKND2D1)
+                                                          0.15       0.28 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U16/Z (AN2XD1)
+                                                          0.13       0.41 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U10/ZN (ND2D1)
+                                                          0.06       0.47 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U207/ZN (NR2D1)
+                                                          0.06       0.53 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U57/ZN (ND2D2)
+                                                          0.06       0.59 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U3/Z (BUFFD4)
+                                                          0.06       0.65 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U68/Z (AN2D4)
+                                                          0.10       0.75 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U31/ZN (INR2D2)
+                                                          0.17       0.91 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U184/ZN (NR2D0)
+                                                          0.09       1.00 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U406/CO (FA1D0)
+                                                          0.21       1.21 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U403/CO (FA1D0)
+                                                          0.14       1.34 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U404/CO (FA1D0)
+                                                          0.14       1.48 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U405/CO (FA1D0)
+                                                          0.14       1.61 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U357/CO (FA1D0)
+                                                          0.17       1.79 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U48/ZN (AOI222D2)
+                                                          0.18       1.96 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U49/Z (OA222D1)
+                                                          0.21       2.17 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/U14/ZN (XNR3D2)
+                                                          0.31       2.49 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/A[8] (shift_add_14_DW01_add_3_DW01_add_233)
+                                                          0.00       2.49 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_8/CO (FA1D0)
+                                                          0.29       2.78 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_9/CO (FA1D0)
+                                                          0.14       2.91 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_10/CO (FA1D0)
+                                                          0.14       3.05 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_11/CO (FA1D0)
+                                                          0.14       3.18 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_12/CO (FA1D0)
+                                                          0.14       3.32 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_13/CO (FA1D0)
+                                                          0.14       3.46 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_14/CO (FA1D0)
+                                                          0.14       3.59 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_15/CO (FA1D0)
+                                                          0.14       3.73 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_16/CO (FA1D0)
+                                                          0.14       3.86 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_17/CO (FA1D0)
+                                                          0.14       4.00 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_18/CO (FA1D0)
+                                                          0.14       4.14 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_19/CO (FA1D0)
+                                                          0.14       4.27 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1_20/CO (FA1D0)
+                                                          0.16       4.43 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U4/Z (AO222D1)
+                                                          0.23       4.66 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U3/ZN (AOI222D1)
+                                                          0.15       4.80 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U2/ZN (XNR3D0)
+                                                          0.20       5.00 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/U1/Z (BUFFD2)
+                                                          0.12       5.12 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_6_root_add_199_I16/SUM[23] (shift_add_14_DW01_add_3_DW01_add_233)
+                                                          0.00       5.12 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_1_root_add_0_root_add_199_I16/B[23] (shift_add_14_DW01_add_1_DW01_add_231)
+                                                          0.00       5.12 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_1_root_add_0_root_add_199_I16/U1_23/S (FA1D0)
+                                                          0.29       5.41 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_1_root_add_0_root_add_199_I16/SUM[23] (shift_add_14_DW01_add_1_DW01_add_231)
+                                                          0.00       5.41 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/B[23] (shift_add_14_DW01_add_0_DW01_add_230)
+                                                          0.00       5.41 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_23/CO (FA1D0)
+                                                          0.20       5.61 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_24/CO (FA1D0)
+                                                          0.14       5.75 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_25/CO (FA1D0)
+                                                          0.14       5.88 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_26/CO (FA1D0)
+                                                          0.14       6.02 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_27/CO (FA1D0)
+                                                          0.14       6.15 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_28/CO (FA1D0)
+                                                          0.14       6.29 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_29/CO (FA1D0)
+                                                          0.14       6.43 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_30/CO (FA1D0)
+                                                          0.14       6.56 f
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/U1_31/Z (XOR3D1)
+                                                          0.14       6.70 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/add_0_root_add_0_root_add_199_I16/SUM[31] (shift_add_14_DW01_add_0_DW01_add_230)
+                                                          0.00       6.70 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/shift_add/shift_add_out[31] (shift_add_14)
+                                                          0.00       6.70 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/add_53/A[31] (fusion_unit_14_DW01_add_0_DW01_add_18)
+                                                          0.00       6.70 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/add_53/U1_31/Z (XOR3D0)
+                                                          0.24       6.94 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/add_53/SUM[31] (fusion_unit_14_DW01_add_0_DW01_add_18)
+                                                          0.00       6.94 r
+  genblk1[0].genblk1[1].genblk1.genblk1.fu/psum[31] (fusion_unit_14)
+                                                          0.00       6.94 r
+  psums_reg[0][1][31]/D (DFCNQD1)                         0.00       6.94 r
+  data arrival time                                                  6.94
+
+  max_delay                                               7.00       7.00
+  library setup time                                     -0.06       6.94
+  data required time                                                 6.94
+  --------------------------------------------------------------------------
+  data required time                                                 6.94
+  data arrival time                                                 -6.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: genblk2[0].acc/acc_sum_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: OBUF[0][0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  accumulator_2      ZeroWireload          tcbn65lptc1d0_ccs
+  accumulator_1      ZeroWireload          tcbn65lptc1d0_ccs
+  accumulator_0      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_13     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_12     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_11     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_10     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_9      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_8      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_7      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_6      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_5      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_4      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_3      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_2      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_1      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_0      ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_2           ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_1           ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_0           ZeroWireload          tcbn65lptc1d0_ccs
+  IBUF_ARRAY_SIZE4_DATA_W32_2
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  IBUF_ARRAY_SIZE4_DATA_W32_1
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  IBUF_ARRAY_SIZE4_DATA_W32_0
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_14           ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_13           ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_12           ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_11           ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_10           ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_9            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_8            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_7            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_6            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_5            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_4            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_3            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_2            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_1            ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_0            ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_14
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_13
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_12
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_11
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_10
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_9
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_8
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_7
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_6
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_5
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_4
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_3
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_2
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_1
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_0
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  accumulator_3      ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_14     ZeroWireload          tcbn65lptc1d0_ccs
+  fusion_unit_15     ZeroWireload          tcbn65lptc1d0_ccs
+  in_mux_3           ZeroWireload          tcbn65lptc1d0_ccs
+  IBUF_ARRAY_SIZE4_DATA_W32_3
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  w_mux_15           ZeroWireload          tcbn65lptc1d0_ccs
+  bitfusion          ZeroWireload          tcbn65lptc1d0_ccs
+  WBUF_ARRAY_SIZE4_DATA_W32_15
+                     ZeroWireload          tcbn65lptc1d0_ccs
+  accumulator_3_DW01_add_0_DW01_add_3
+                     ZeroWireload          tcbn65lptc1d0_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  genblk2[0].acc/acc_sum_reg[0]/CP (DFCNQD1)              0.00 #     0.00 r
+  genblk2[0].acc/acc_sum_reg[0]/Q (DFCNQD1)               0.22       0.22 f
+  genblk2[0].acc/acc_sum[0] (accumulator_3)               0.00       0.22 f
+  OBUF[0][0] (out)                                        0.00       0.22 f
+  data arrival time                                                  0.22
+
+  max_delay                                               7.00       7.00
+  output external delay                                   0.00       7.00
+  data required time                                                 7.00
+  --------------------------------------------------------------------------
+  data required time                                                 7.00
+  data arrival time                                                 -0.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.78
+
+
+1

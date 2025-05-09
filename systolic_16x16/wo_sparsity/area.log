@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : bitfusion
+Version: P-2019.03-SP5-6
+Date   : Thu May  8 21:14:36 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65lptc1d0_ccs (File: /home/sparclab/a/li4509/TSMC2024/tcbn65lp_220a/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65lp_200a/tcbn65lptc1d0_ccs.db)
+
+Number of ports:                       392760
+Number of nets:                        845405
+Number of cells:                       378263
+Number of combinational cells:         336439
+Number of sequential cells:             34336
+Number of macros/black boxes:               0
+Number of buf/inv:                      65780
+Number of references:                     818
+
+Combinational area:            1377292.689963
+Buf/Inv area:                    74239.202888
+Noncombinational area:          298575.363678
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               1675868.053641
+Total area:                 undefined
+1

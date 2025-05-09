@@ -1,0 +1,1364 @@
+Loading db file '/home/sparclab/a/li4509/TSMC2024/tcbn65lp_220a/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65lp_200a/tcbn65lptc1d0_ccs.db'
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort high
+Design : bitfusion
+Version: P-2019.03-SP5-6
+Date   : Thu May  8 20:14:15 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lptc1d0_ccs (File: /home/sparclab/a/li4509/TSMC2024/tcbn65lp_220a/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65lp_200a/tcbn65lptc1d0_ccs.db)
+
+
+Operating Conditions: NC1D0COM   Library: tcbn65lptc1d0_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+bitfusion              ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_15
+                       ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_15               ZeroWireload      tcbn65lptc1d0_ccs
+IBUF_ARRAY_SIZE4_DATA_W32_3
+                       ZeroWireload      tcbn65lptc1d0_ccs
+in_mux_3               ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_15         ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_14         ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_3          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_255          ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15           ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_0
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_1
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_2
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_3
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_4
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_5
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_6
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_7
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_8
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_9
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_10
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_11
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_12
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_13
+                       ZeroWireload      tcbn65lptc1d0_ccs
+WBUF_ARRAY_SIZE4_DATA_W32_14
+                       ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_0                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_1                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_2                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_3                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_4                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_5                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_6                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_7                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_8                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_9                ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_10               ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_11               ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_12               ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_13               ZeroWireload      tcbn65lptc1d0_ccs
+w_mux_14               ZeroWireload      tcbn65lptc1d0_ccs
+IBUF_ARRAY_SIZE4_DATA_W32_0
+                       ZeroWireload      tcbn65lptc1d0_ccs
+IBUF_ARRAY_SIZE4_DATA_W32_1
+                       ZeroWireload      tcbn65lptc1d0_ccs
+IBUF_ARRAY_SIZE4_DATA_W32_2
+                       ZeroWireload      tcbn65lptc1d0_ccs
+in_mux_0               ZeroWireload      tcbn65lptc1d0_ccs
+in_mux_1               ZeroWireload      tcbn65lptc1d0_ccs
+in_mux_2               ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_0          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_1          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_2          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_3          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_4          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_5          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_6          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_7          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_8          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_9          ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_10         ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_11         ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_12         ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_13         ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_0          ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_1          ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_2          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_0            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_1            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_2            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_3            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_4            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_5            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_6            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_7            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_8            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_9            ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_10           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_11           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_12           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_13           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_14           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_15           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_16           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_17           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_18           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_19           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_20           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_21           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_22           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_23           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_24           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_25           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_26           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_27           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_28           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_29           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_30           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_31           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_32           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_33           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_34           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_35           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_36           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_37           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_38           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_39           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_40           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_41           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_42           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_43           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_44           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_45           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_46           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_47           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_48           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_49           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_50           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_51           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_52           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_53           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_54           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_55           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_56           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_57           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_58           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_59           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_60           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_61           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_62           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_63           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_64           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_65           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_66           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_67           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_68           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_69           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_70           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_71           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_72           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_73           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_74           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_75           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_76           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_77           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_78           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_79           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_80           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_81           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_82           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_83           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_84           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_85           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_86           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_87           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_88           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_89           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_90           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_91           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_92           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_93           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_94           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_95           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_96           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_97           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_98           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_99           ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_100          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_101          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_102          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_103          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_104          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_105          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_106          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_107          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_108          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_109          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_110          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_111          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_112          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_113          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_114          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_115          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_116          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_117          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_118          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_119          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_120          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_121          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_122          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_123          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_124          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_125          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_126          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_127          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_128          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_129          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_130          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_131          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_132          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_133          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_134          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_135          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_136          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_137          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_138          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_139          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_140          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_141          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_142          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_143          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_144          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_145          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_146          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_147          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_148          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_149          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_150          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_151          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_152          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_153          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_154          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_155          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_156          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_157          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_158          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_159          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_160          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_161          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_162          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_163          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_164          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_165          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_166          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_167          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_168          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_169          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_170          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_171          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_172          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_173          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_174          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_175          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_176          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_177          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_178          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_179          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_180          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_181          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_182          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_183          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_184          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_185          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_186          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_187          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_188          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_189          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_190          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_191          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_192          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_193          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_194          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_195          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_196          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_197          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_198          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_199          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_200          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_201          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_202          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_203          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_204          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_205          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_206          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_207          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_208          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_209          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_210          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_211          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_212          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_213          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_214          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_215          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_216          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_217          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_218          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_219          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_220          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_221          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_222          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_223          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_224          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_225          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_226          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_227          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_228          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_229          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_230          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_231          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_232          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_233          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_234          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_235          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_236          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_237          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_238          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_239          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_240          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_241          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_242          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_243          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_244          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_245          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_246          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_247          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_248          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_249          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_250          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_251          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_252          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_253          ZeroWireload      tcbn65lptc1d0_ccs
+bit_brick_254          ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9            ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10           ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11           ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12           ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13           ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14           ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_0_DW01_add_0
+                       ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_1_DW01_add_0_DW01_add_1
+                       ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_2_DW01_add_0_DW01_add_2
+                       ZeroWireload      tcbn65lptc1d0_ccs
+accumulator_3_DW01_add_0_DW01_add_3
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_0_DW01_add_0_DW01_add_4
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_1_DW01_add_0_DW01_add_5
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_2_DW01_add_0_DW01_add_6
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_3_DW01_add_0_DW01_add_7
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_4_DW01_add_0_DW01_add_8
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_5_DW01_add_0_DW01_add_9
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_6_DW01_add_0_DW01_add_10
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_7_DW01_add_0_DW01_add_11
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_8_DW01_add_0_DW01_add_12
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_9_DW01_add_0_DW01_add_13
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_10_DW01_add_0_DW01_add_14
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_11_DW01_add_0_DW01_add_15
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_12_DW01_add_0_DW01_add_16
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_13_DW01_add_0_DW01_add_17
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_14_DW01_add_0_DW01_add_18
+                       ZeroWireload      tcbn65lptc1d0_ccs
+fusion_unit_15_DW01_add_0_DW01_add_19
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_0_DW01_add_20
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_1_DW01_add_21
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_2_DW01_add_22
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_3_DW01_add_23
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_4_DW01_add_24
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_5_DW01_add_25
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_6_DW01_add_26
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_13_DW01_add_14_DW01_add_34
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_0_DW01_add_35
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_1_DW01_add_36
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_2_DW01_add_37
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_3_DW01_add_38
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_4_DW01_add_39
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_5_DW01_add_40
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_6_DW01_add_41
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_12_DW01_add_14_DW01_add_49
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_0_DW01_add_50
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_1_DW01_add_51
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_2_DW01_add_52
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_3_DW01_add_53
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_4_DW01_add_54
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_5_DW01_add_55
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_6_DW01_add_56
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_11_DW01_add_14_DW01_add_64
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_0_DW01_add_65
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_1_DW01_add_66
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_2_DW01_add_67
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_3_DW01_add_68
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_4_DW01_add_69
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_5_DW01_add_70
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_6_DW01_add_71
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_10_DW01_add_14_DW01_add_79
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_0_DW01_add_80
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_1_DW01_add_81
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_2_DW01_add_82
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_3_DW01_add_83
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_4_DW01_add_84
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_5_DW01_add_85
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_6_DW01_add_86
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_9_DW01_add_14_DW01_add_94
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_0_DW01_add_95
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_1_DW01_add_96
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_2_DW01_add_97
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_3_DW01_add_98
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_4_DW01_add_99
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_5_DW01_add_100
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_6_DW01_add_101
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_8_DW01_add_14_DW01_add_109
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_0_DW01_add_110
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_1_DW01_add_111
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_2_DW01_add_112
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_3_DW01_add_113
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_4_DW01_add_114
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_5_DW01_add_115
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_6_DW01_add_116
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_7_DW01_add_14_DW01_add_124
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_0_DW01_add_125
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_1_DW01_add_126
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_2_DW01_add_127
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_3_DW01_add_128
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_4_DW01_add_129
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_5_DW01_add_130
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_6_DW01_add_131
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_6_DW01_add_14_DW01_add_139
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_0_DW01_add_140
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_1_DW01_add_141
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_2_DW01_add_142
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_3_DW01_add_143
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_4_DW01_add_144
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_5_DW01_add_145
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_6_DW01_add_146
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_5_DW01_add_14_DW01_add_154
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_0_DW01_add_155
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_1_DW01_add_156
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_2_DW01_add_157
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_3_DW01_add_158
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_4_DW01_add_159
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_5_DW01_add_160
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_6_DW01_add_161
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_4_DW01_add_14_DW01_add_169
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_0_DW01_add_170
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_1_DW01_add_171
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_2_DW01_add_172
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_3_DW01_add_173
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_4_DW01_add_174
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_5_DW01_add_175
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_6_DW01_add_176
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_3_DW01_add_14_DW01_add_184
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_0_DW01_add_185
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_1_DW01_add_186
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_2_DW01_add_187
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_3_DW01_add_188
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_4_DW01_add_189
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_5_DW01_add_190
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_6_DW01_add_191
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_2_DW01_add_14_DW01_add_199
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_0_DW01_add_200
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_1_DW01_add_201
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_2_DW01_add_202
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_3_DW01_add_203
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_4_DW01_add_204
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_5_DW01_add_205
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_6_DW01_add_206
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_1_DW01_add_14_DW01_add_214
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_0_DW01_add_215
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_1_DW01_add_216
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_2_DW01_add_217
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_3_DW01_add_218
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_4_DW01_add_219
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_5_DW01_add_220
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_6_DW01_add_221
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_0_DW01_add_14_DW01_add_229
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_0_DW01_add_230
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_1_DW01_add_231
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_2_DW01_add_232
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_3_DW01_add_233
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_4_DW01_add_234
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_5_DW01_add_235
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_6_DW01_add_236
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_14_DW01_add_14_DW01_add_244
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_0_DW01_add_245
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_1_DW01_add_246
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_2_DW01_add_247
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_3_DW01_add_248
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_4_DW01_add_249
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_5_DW01_add_250
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_6_DW01_add_251
+                       ZeroWireload      tcbn65lptc1d0_ccs
+shift_add_15_DW01_add_14_DW01_add_259
+                       ZeroWireload      tcbn65lptc1d0_ccs
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+bitfusion                              8.78e-02    1.720 3.33e+03    1.811 100.0
+  genblk2[3].acc (accumulator_0)       5.21e-04 2.18e-02   17.746 2.24e-02   1.2
+    add_24 (accumulator_0_DW01_add_0)  1.74e-05 2.49e-04   11.601 2.78e-04   0.0
+  genblk2[2].acc (accumulator_1)       5.22e-04 2.18e-02   17.746 2.24e-02   1.2
+    add_24 (accumulator_1_DW01_add_0_DW01_add_1)
+                                       1.88e-05 2.74e-04   11.601 3.05e-04   0.0
+  genblk2[1].acc (accumulator_2)       5.26e-04 2.19e-02   17.753 2.24e-02   1.2
+    add_24 (accumulator_2_DW01_add_0_DW01_add_2)
+                                       2.08e-05 3.08e-04   11.602 3.40e-04   0.0
+  genblk2[0].acc (accumulator_3)       5.27e-04 2.19e-02   17.753 2.24e-02   1.2
+    add_24 (accumulator_3_DW01_add_0_DW01_add_3)
+                                       2.10e-05 3.06e-04   11.602 3.39e-04   0.0
+  genblk1[3].genblk1[3].genblk1.genblk1.fu (fusion_unit_0)
+                                       1.90e-03 3.11e-03  173.807 5.18e-03   0.3
+    add_53 (fusion_unit_0_DW01_add_0_DW01_add_4)
+                                       2.18e-05 3.18e-04   11.600 3.52e-04   0.0
+    shift_add (shift_add_0)            1.54e-03 2.27e-03  128.636 3.94e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_0_DW01_add_0_DW01_add_215)
+                                       1.77e-05 1.67e-04   11.602 1.96e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_0_DW01_add_1_DW01_add_216)
+                                       2.63e-05 1.72e-04   11.886 2.10e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_0_DW01_add_2_DW01_add_217)
+                                       1.82e-05 1.77e-04   11.601 2.07e-04   0.0
+      add_6_root_add_199_I16 (shift_add_0_DW01_add_3_DW01_add_218)
+                                       1.90e-05 9.84e-05    8.907 1.26e-04   0.0
+      add_5_root_add_199_I16 (shift_add_0_DW01_add_4_DW01_add_219)
+                                       1.46e-05 1.44e-04   11.226 1.69e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_0_DW01_add_5_DW01_add_220)
+                                       1.43e-05 1.43e-04   11.539 1.69e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_0_DW01_add_6_DW01_add_221)
+                                       2.25e-05 1.53e-04   11.600 1.87e-04   0.0
+      add_7_root_add_199_I16 (shift_add_0_DW01_add_14_DW01_add_229)
+                                       2.02e-05 7.08e-05    6.624 9.76e-05   0.0
+    genblk1[15].BB (bit_brick_0)       2.18e-05 3.27e-05    2.111 5.66e-05   0.0
+    genblk1[14].BB (bit_brick_1)       2.17e-05 3.40e-05    2.110 5.78e-05   0.0
+    genblk1[13].BB (bit_brick_2)       2.12e-05 3.32e-05    2.110 5.65e-05   0.0
+    genblk1[12].BB (bit_brick_3)       2.16e-05 3.39e-05    2.111 5.77e-05   0.0
+    genblk1[11].BB (bit_brick_4)       2.06e-05 3.10e-05    2.086 5.37e-05   0.0
+    genblk1[10].BB (bit_brick_5)       2.10e-05 3.27e-05    2.086 5.58e-05   0.0
+    genblk1[9].BB (bit_brick_6)        2.01e-05 3.12e-05    2.086 5.34e-05   0.0
+    genblk1[8].BB (bit_brick_7)        2.07e-05 3.21e-05    2.086 5.49e-05   0.0
+    genblk1[7].BB (bit_brick_8)        2.09e-05 3.20e-05    2.110 5.50e-05   0.0
+    genblk1[6].BB (bit_brick_9)        2.02e-05 3.09e-05    2.110 5.32e-05   0.0
+    genblk1[5].BB (bit_brick_10)       2.09e-05 3.34e-05    2.110 5.64e-05   0.0
+    genblk1[4].BB (bit_brick_11)       2.15e-05 3.36e-05    2.110 5.72e-05   0.0
+    genblk1[3].BB (bit_brick_12)       2.17e-05 3.28e-05    2.086 5.66e-05   0.0
+    genblk1[2].BB (bit_brick_13)       2.03e-05 3.10e-05    2.086 5.34e-05   0.0
+    genblk1[1].BB (bit_brick_14)       2.01e-05 3.31e-05    2.086 5.53e-05   0.0
+    genblk1[0].BB (bit_brick_15)       2.08e-05 3.42e-05    2.086 5.70e-05   0.0
+  genblk1[3].genblk1[3].wmux (w_mux_0) 1.78e-03 2.50e-02   11.768 2.68e-02   1.5
+  genblk1[3].genblk1[3].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_0)
+                                       8.50e-04 2.38e-02    6.308 2.47e-02   1.4
+  genblk1[3].genblk1[2].genblk1.genblk1.fu (fusion_unit_1)
+                                       1.96e-03 3.36e-03  173.325 5.49e-03   0.3
+    add_53 (fusion_unit_1_DW01_add_0_DW01_add_5)
+                                       2.47e-05 3.55e-04   11.600 3.91e-04   0.0
+    shift_add (shift_add_1)            1.57e-03 2.44e-03  128.145 4.14e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_1_DW01_add_0_DW01_add_200)
+                                       1.97e-05 1.87e-04   11.602 2.18e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_1_DW01_add_1_DW01_add_201)
+                                       2.75e-05 1.84e-04   11.601 2.23e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_1_DW01_add_2_DW01_add_202)
+                                       1.82e-05 1.82e-04   11.601 2.12e-04   0.0
+      add_6_root_add_199_I16 (shift_add_1_DW01_add_3_DW01_add_203)
+                                       2.25e-05 1.15e-04    9.067 1.47e-04   0.0
+      add_5_root_add_199_I16 (shift_add_1_DW01_add_4_DW01_add_204)
+                                       1.58e-05 1.53e-04   11.457 1.80e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_1_DW01_add_5_DW01_add_205)
+                                       1.70e-05 1.72e-04   11.540 2.00e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_1_DW01_add_6_DW01_add_206)
+                                       2.38e-05 1.63e-04   11.601 1.98e-04   0.0
+      add_7_root_add_199_I16 (shift_add_1_DW01_add_14_DW01_add_214)
+                                       2.20e-05 7.71e-05    6.258 1.05e-04   0.0
+    genblk1[15].BB (bit_brick_16)      2.38e-05 3.66e-05    2.111 6.26e-05   0.0
+    genblk1[14].BB (bit_brick_17)      2.31e-05 3.54e-05    2.111 6.05e-05   0.0
+    genblk1[13].BB (bit_brick_18)      2.23e-05 3.39e-05    2.111 5.83e-05   0.0
+    genblk1[12].BB (bit_brick_19)      2.31e-05 3.52e-05    2.111 6.04e-05   0.0
+    genblk1[11].BB (bit_brick_20)      2.26e-05 3.47e-05    2.086 5.94e-05   0.0
+    genblk1[10].BB (bit_brick_21)      2.25e-05 3.56e-05    2.086 6.02e-05   0.0
+    genblk1[9].BB (bit_brick_22)       2.26e-05 3.44e-05    2.086 5.91e-05   0.0
+    genblk1[8].BB (bit_brick_23)       2.33e-05 3.65e-05    2.086 6.19e-05   0.0
+    genblk1[7].BB (bit_brick_24)       2.27e-05 3.39e-05    2.111 5.88e-05   0.0
+    genblk1[6].BB (bit_brick_25)       2.24e-05 3.46e-05    2.111 5.91e-05   0.0
+    genblk1[5].BB (bit_brick_26)       2.27e-05 3.59e-05    2.111 6.07e-05   0.0
+    genblk1[4].BB (bit_brick_27)       2.29e-05 3.58e-05    2.111 6.09e-05   0.0
+    genblk1[3].BB (bit_brick_28)       2.36e-05 3.67e-05    2.086 6.24e-05   0.0
+    genblk1[2].BB (bit_brick_29)       2.27e-05 3.48e-05    2.086 5.95e-05   0.0
+    genblk1[1].BB (bit_brick_30)       2.14e-05 3.48e-05    2.086 5.83e-05   0.0
+    genblk1[0].BB (bit_brick_31)       2.23e-05 3.69e-05    2.086 6.13e-05   0.0
+  genblk1[3].genblk1[2].wmux (w_mux_1) 1.79e-03 2.50e-02   11.769 2.68e-02   1.5
+  genblk1[3].genblk1[2].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_1)
+                                       8.50e-04 2.38e-02    6.308 2.47e-02   1.4
+  genblk1[3].genblk1[1].genblk1.genblk1.fu (fusion_unit_2)
+                                       1.99e-03 3.46e-03  173.823 5.63e-03   0.3
+    add_53 (fusion_unit_2_DW01_add_0_DW01_add_6)
+                                       2.72e-05 3.99e-04   11.600 4.37e-04   0.0
+    shift_add (shift_add_2)            1.59e-03 2.49e-03  128.640 4.20e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_2_DW01_add_0_DW01_add_185)
+                                       2.08e-05 2.02e-04   11.602 2.34e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_2_DW01_add_1_DW01_add_186)
+                                       3.11e-05 2.06e-04   11.888 2.49e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_2_DW01_add_2_DW01_add_187)
+                                       2.02e-05 2.01e-04   11.601 2.32e-04   0.0
+      add_6_root_add_199_I16 (shift_add_2_DW01_add_3_DW01_add_188)
+                                       2.44e-05 1.26e-04    8.908 1.59e-04   0.0
+      add_5_root_add_199_I16 (shift_add_2_DW01_add_4_DW01_add_189)
+                                       1.64e-05 1.59e-04   11.226 1.87e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_2_DW01_add_5_DW01_add_190)
+                                       1.69e-05 1.66e-04   11.540 1.95e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_2_DW01_add_6_DW01_add_191)
+                                       2.50e-05 1.72e-04   11.600 2.08e-04   0.0
+      add_7_root_add_199_I16 (shift_add_2_DW01_add_14_DW01_add_199)
+                                       2.08e-05 7.28e-05    6.624 1.00e-04   0.0
+    genblk1[15].BB (bit_brick_32)      2.44e-05 3.61e-05    2.111 6.26e-05   0.0
+    genblk1[14].BB (bit_brick_33)      2.39e-05 3.66e-05    2.111 6.27e-05   0.0
+    genblk1[13].BB (bit_brick_34)      2.35e-05 3.58e-05    2.111 6.13e-05   0.0
+    genblk1[12].BB (bit_brick_35)      2.34e-05 3.56e-05    2.111 6.11e-05   0.0
+    genblk1[11].BB (bit_brick_36)      2.35e-05 3.55e-05    2.087 6.11e-05   0.0
+    genblk1[10].BB (bit_brick_37)      2.33e-05 3.59e-05    2.087 6.13e-05   0.0
+    genblk1[9].BB (bit_brick_38)       2.32e-05 3.63e-05    2.086 6.16e-05   0.0
+    genblk1[8].BB (bit_brick_39)       2.34e-05 3.59e-05    2.086 6.14e-05   0.0
+    genblk1[7].BB (bit_brick_40)       2.32e-05 3.51e-05    2.111 6.05e-05   0.0
+    genblk1[6].BB (bit_brick_41)       2.30e-05 3.56e-05    2.111 6.07e-05   0.0
+    genblk1[5].BB (bit_brick_42)       2.36e-05 3.67e-05    2.111 6.24e-05   0.0
+    genblk1[4].BB (bit_brick_43)       2.34e-05 3.52e-05    2.111 6.07e-05   0.0
+    genblk1[3].BB (bit_brick_44)       2.49e-05 3.77e-05    2.087 6.46e-05   0.0
+    genblk1[2].BB (bit_brick_45)       2.31e-05 3.55e-05    2.086 6.08e-05   0.0
+    genblk1[1].BB (bit_brick_46)       2.23e-05 3.55e-05    2.086 5.99e-05   0.0
+    genblk1[0].BB (bit_brick_47)       2.29e-05 3.72e-05    2.087 6.23e-05   0.0
+  genblk1[3].genblk1[1].wmux (w_mux_2) 1.78e-03 2.50e-02   11.755 2.67e-02   1.5
+  genblk1[3].genblk1[1].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_2)
+                                       8.46e-04 2.38e-02    6.303 2.47e-02   1.4
+  genblk1[3].genblk1[0].genblk1.genblk1.fu (fusion_unit_3)
+                                       2.01e-03 3.57e-03  173.336 5.76e-03   0.3
+    add_53 (fusion_unit_3_DW01_add_0_DW01_add_7)
+                                       2.72e-05 3.96e-04   11.600 4.35e-04   0.0
+    shift_add (shift_add_3)            1.60e-03 2.57e-03  128.148 4.29e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_3_DW01_add_0_DW01_add_170)
+                                       2.14e-05 2.06e-04   11.603 2.39e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_3_DW01_add_1_DW01_add_171)
+                                       3.03e-05 2.02e-04   11.601 2.44e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_3_DW01_add_2_DW01_add_172)
+                                       2.16e-05 2.13e-04   11.602 2.46e-04   0.0
+      add_6_root_add_199_I16 (shift_add_3_DW01_add_3_DW01_add_173)
+                                       2.35e-05 1.19e-04    9.068 1.52e-04   0.0
+      add_5_root_add_199_I16 (shift_add_3_DW01_add_4_DW01_add_174)
+                                       1.82e-05 1.77e-04   11.458 2.07e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_3_DW01_add_5_DW01_add_175)
+                                       1.70e-05 1.71e-04   11.540 2.00e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_3_DW01_add_6_DW01_add_176)
+                                       2.74e-05 1.87e-04   11.600 2.26e-04   0.0
+      add_7_root_add_199_I16 (shift_add_3_DW01_add_14_DW01_add_184)
+                                       2.16e-05 7.43e-05    6.284 1.02e-04   0.0
+    genblk1[15].BB (bit_brick_48)      2.51e-05 3.82e-05    2.111 6.54e-05   0.0
+    genblk1[14].BB (bit_brick_49)      2.49e-05 3.74e-05    2.112 6.44e-05   0.0
+    genblk1[13].BB (bit_brick_50)      2.47e-05 3.82e-05    2.111 6.49e-05   0.0
+    genblk1[12].BB (bit_brick_51)      2.52e-05 3.83e-05    2.111 6.57e-05   0.0
+    genblk1[11].BB (bit_brick_52)      2.38e-05 3.60e-05    2.087 6.19e-05   0.0
+    genblk1[10].BB (bit_brick_53)      2.35e-05 3.62e-05    2.087 6.18e-05   0.0
+    genblk1[9].BB (bit_brick_54)       2.38e-05 3.59e-05    2.087 6.18e-05   0.0
+    genblk1[8].BB (bit_brick_55)       2.43e-05 3.78e-05    2.087 6.42e-05   0.0
+    genblk1[7].BB (bit_brick_56)       2.54e-05 3.84e-05    2.111 6.60e-05   0.0
+    genblk1[6].BB (bit_brick_57)       2.39e-05 3.73e-05    2.111 6.33e-05   0.0
+    genblk1[5].BB (bit_brick_58)       2.47e-05 3.95e-05    2.111 6.64e-05   0.0
+    genblk1[4].BB (bit_brick_59)       2.56e-05 3.95e-05    2.111 6.72e-05   0.0
+    genblk1[3].BB (bit_brick_60)       2.52e-05 3.91e-05    2.087 6.64e-05   0.0
+    genblk1[2].BB (bit_brick_61)       2.45e-05 3.62e-05    2.087 6.28e-05   0.0
+    genblk1[1].BB (bit_brick_62)       2.23e-05 3.56e-05    2.087 6.00e-05   0.0
+    genblk1[0].BB (bit_brick_63)       2.37e-05 3.83e-05    2.087 6.40e-05   0.0
+  genblk1[3].genblk1[0].genblk1.imux (in_mux_0)
+                                       1.85e-03 2.50e-02   11.763 2.69e-02   1.5
+  genblk1[3].genblk1[0].genblk1.IBUFs (IBUF_ARRAY_SIZE4_DATA_W32_0)
+                                       8.49e-04 2.38e-02    6.306 2.47e-02   1.4
+  genblk1[3].genblk1[0].wmux (w_mux_3) 1.83e-03 2.51e-02   11.762 2.69e-02   1.5
+  genblk1[3].genblk1[0].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_3)
+                                       8.47e-04 2.38e-02    6.304 2.47e-02   1.4
+  genblk1[2].genblk1[3].genblk1.genblk1.fu (fusion_unit_4)
+                                       1.82e-03 2.83e-03  173.632 4.82e-03   0.3
+    add_53 (fusion_unit_4_DW01_add_0_DW01_add_8)
+                                       1.72e-05 2.48e-04   11.598 2.77e-04   0.0
+    shift_add (shift_add_4)            1.49e-03 2.11e-03  128.470 3.73e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_4_DW01_add_0_DW01_add_155)
+                                       1.50e-05 1.41e-04   11.601 1.67e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_4_DW01_add_1_DW01_add_156)
+                                       2.05e-05 1.37e-04   11.600 1.69e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_4_DW01_add_2_DW01_add_157)
+                                       1.45e-05 1.47e-04   11.599 1.73e-04   0.0
+      add_6_root_add_199_I16 (shift_add_4_DW01_add_3_DW01_add_158)
+                                       1.59e-05 8.19e-05    8.500 1.06e-04   0.0
+      add_5_root_add_199_I16 (shift_add_4_DW01_add_4_DW01_add_159)
+                                       1.22e-05 1.19e-04   11.225 1.43e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_4_DW01_add_5_DW01_add_160)
+                                       1.28e-05 1.28e-04   11.712 1.53e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_4_DW01_add_6_DW01_add_161)
+                                       1.84e-05 1.25e-04   11.599 1.55e-04   0.0
+      add_7_root_add_199_I16 (shift_add_4_DW01_add_14_DW01_add_169)
+                                       1.58e-05 5.52e-05    6.563 7.76e-05   0.0
+    genblk1[15].BB (bit_brick_64)      1.95e-05 2.94e-05    2.110 5.11e-05   0.0
+    genblk1[14].BB (bit_brick_65)      1.99e-05 2.89e-05    2.110 5.10e-05   0.0
+    genblk1[13].BB (bit_brick_66)      1.95e-05 2.94e-05    2.110 5.10e-05   0.0
+    genblk1[12].BB (bit_brick_67)      2.05e-05 3.15e-05    2.110 5.41e-05   0.0
+    genblk1[11].BB (bit_brick_68)      1.86e-05 2.81e-05    2.085 4.88e-05   0.0
+    genblk1[10].BB (bit_brick_69)      1.81e-05 2.76e-05    2.085 4.78e-05   0.0
+    genblk1[9].BB (bit_brick_70)       1.94e-05 2.97e-05    2.085 5.12e-05   0.0
+    genblk1[8].BB (bit_brick_71)       2.03e-05 3.19e-05    2.086 5.43e-05   0.0
+    genblk1[7].BB (bit_brick_72)       1.91e-05 2.88e-05    2.110 5.00e-05   0.0
+    genblk1[6].BB (bit_brick_73)       1.90e-05 2.74e-05    2.110 4.85e-05   0.0
+    genblk1[5].BB (bit_brick_74)       1.87e-05 2.88e-05    2.110 4.96e-05   0.0
+    genblk1[4].BB (bit_brick_75)       1.95e-05 3.00e-05    2.110 5.16e-05   0.0
+    genblk1[3].BB (bit_brick_76)       1.92e-05 2.87e-05    2.086 5.01e-05   0.0
+    genblk1[2].BB (bit_brick_77)       1.88e-05 2.85e-05    2.085 4.94e-05   0.0
+    genblk1[1].BB (bit_brick_78)       1.81e-05 2.85e-05    2.085 4.87e-05   0.0
+    genblk1[0].BB (bit_brick_79)       1.90e-05 2.99e-05    2.085 5.10e-05   0.0
+  genblk1[2].genblk1[3].wmux (w_mux_4) 1.76e-03 2.49e-02   11.752 2.67e-02   1.5
+  genblk1[2].genblk1[3].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_4)
+                                       8.48e-04 2.38e-02    6.303 2.47e-02   1.4
+  genblk1[2].genblk1[2].genblk1.genblk1.fu (fusion_unit_5)
+                                       1.93e-03 3.18e-03  173.845 5.28e-03   0.3
+    add_53 (fusion_unit_5_DW01_add_0_DW01_add_9)
+                                       1.96e-05 2.77e-04   11.598 3.08e-04   0.0
+    shift_add (shift_add_5)            1.56e-03 2.35e-03  128.673 4.04e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_5_DW01_add_0_DW01_add_140)
+                                       1.91e-05 1.82e-04   11.601 2.13e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_5_DW01_add_1_DW01_add_141)
+                                       2.58e-05 1.72e-04   11.601 2.09e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_5_DW01_add_2_DW01_add_142)
+                                       1.93e-05 1.91e-04   11.601 2.22e-04   0.0
+      add_6_root_add_199_I16 (shift_add_5_DW01_add_3_DW01_add_143)
+                                       1.96e-05 1.02e-04    8.893 1.30e-04   0.0
+      add_5_root_add_199_I16 (shift_add_5_DW01_add_4_DW01_add_144)
+                                       1.58e-05 1.54e-04   11.456 1.81e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_5_DW01_add_5_DW01_add_145)
+                                       1.53e-05 1.56e-04   11.539 1.83e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_5_DW01_add_6_DW01_add_146)
+                                       2.47e-05 1.69e-04   11.600 2.06e-04   0.0
+      add_7_root_add_199_I16 (shift_add_5_DW01_add_14_DW01_add_154)
+                                       2.08e-05 7.35e-05    6.624 1.01e-04   0.0
+    genblk1[15].BB (bit_brick_80)      2.29e-05 3.47e-05    2.110 5.98e-05   0.0
+    genblk1[14].BB (bit_brick_81)      2.20e-05 3.41e-05    2.110 5.82e-05   0.0
+    genblk1[13].BB (bit_brick_82)      2.27e-05 3.50e-05    2.111 5.98e-05   0.0
+    genblk1[12].BB (bit_brick_83)      2.37e-05 3.64e-05    2.111 6.22e-05   0.0
+    genblk1[11].BB (bit_brick_84)      2.17e-05 3.36e-05    2.086 5.74e-05   0.0
+    genblk1[10].BB (bit_brick_85)      2.14e-05 3.41e-05    2.086 5.76e-05   0.0
+    genblk1[9].BB (bit_brick_86)       2.22e-05 3.50e-05    2.086 5.92e-05   0.0
+    genblk1[8].BB (bit_brick_87)       2.15e-05 3.28e-05    2.086 5.64e-05   0.0
+    genblk1[7].BB (bit_brick_88)       2.24e-05 3.45e-05    2.111 5.90e-05   0.0
+    genblk1[6].BB (bit_brick_89)       2.09e-05 3.25e-05    2.110 5.55e-05   0.0
+    genblk1[5].BB (bit_brick_90)       2.18e-05 3.51e-05    2.110 5.90e-05   0.0
+    genblk1[4].BB (bit_brick_91)       2.21e-05 3.37e-05    2.110 5.79e-05   0.0
+    genblk1[3].BB (bit_brick_92)       2.21e-05 3.44e-05    2.086 5.85e-05   0.0
+    genblk1[2].BB (bit_brick_93)       2.15e-05 3.33e-05    2.086 5.69e-05   0.0
+    genblk1[1].BB (bit_brick_94)       2.03e-05 3.29e-05    2.086 5.53e-05   0.0
+    genblk1[0].BB (bit_brick_95)       2.13e-05 3.39e-05    2.086 5.73e-05   0.0
+  genblk1[2].genblk1[2].wmux (w_mux_5) 1.80e-03 2.50e-02   11.764 2.68e-02   1.5
+  genblk1[2].genblk1[2].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_5)
+                                       8.52e-04 2.38e-02    6.307 2.47e-02   1.4
+  genblk1[2].genblk1[1].genblk1.genblk1.fu (fusion_unit_6)
+                                       1.90e-03 3.10e-03  173.024 5.17e-03   0.3
+    add_53 (fusion_unit_6_DW01_add_0_DW01_add_10)
+                                       2.04e-05 3.00e-04   11.599 3.32e-04   0.0
+    shift_add (shift_add_6)            1.53e-03 2.26e-03  127.845 3.91e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_6_DW01_add_0_DW01_add_125)
+                                       1.80e-05 1.70e-04   11.602 1.99e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_6_DW01_add_1_DW01_add_126)
+                                       2.48e-05 1.66e-04   11.540 2.03e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_6_DW01_add_2_DW01_add_127)
+                                       1.76e-05 1.74e-04   11.601 2.03e-04   0.0
+      add_6_root_add_199_I16 (shift_add_6_DW01_add_3_DW01_add_128)
+                                       1.95e-05 1.02e-04    8.273 1.30e-04   0.0
+      add_5_root_add_199_I16 (shift_add_6_DW01_add_4_DW01_add_129)
+                                       1.55e-05 1.53e-04   11.226 1.80e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_6_DW01_add_5_DW01_add_130)
+                                       1.48e-05 1.51e-04   11.539 1.77e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_6_DW01_add_6_DW01_add_131)
+                                       2.10e-05 1.45e-04   11.599 1.77e-04   0.0
+      add_7_root_add_199_I16 (shift_add_6_DW01_add_14_DW01_add_139)
+                                       1.80e-05 6.10e-05    6.624 8.56e-05   0.0
+    genblk1[15].BB (bit_brick_96)      2.28e-05 3.30e-05    2.111 5.79e-05   0.0
+    genblk1[14].BB (bit_brick_97)      2.22e-05 3.41e-05    2.111 5.84e-05   0.0
+    genblk1[13].BB (bit_brick_98)      2.21e-05 3.28e-05    2.111 5.70e-05   0.0
+    genblk1[12].BB (bit_brick_99)      2.36e-05 3.54e-05    2.111 6.11e-05   0.0
+    genblk1[11].BB (bit_brick_100)     2.22e-05 3.36e-05    2.086 5.80e-05   0.0
+    genblk1[10].BB (bit_brick_101)     2.16e-05 3.35e-05    2.086 5.71e-05   0.0
+    genblk1[9].BB (bit_brick_102)      2.23e-05 3.35e-05    2.086 5.79e-05   0.0
+    genblk1[8].BB (bit_brick_103)      2.19e-05 3.31e-05    2.086 5.71e-05   0.0
+    genblk1[7].BB (bit_brick_104)      2.25e-05 3.42e-05    2.111 5.88e-05   0.0
+    genblk1[6].BB (bit_brick_105)      2.26e-05 3.40e-05    2.111 5.87e-05   0.0
+    genblk1[5].BB (bit_brick_106)      2.18e-05 3.32e-05    2.111 5.71e-05   0.0
+    genblk1[4].BB (bit_brick_107)      2.33e-05 3.54e-05    2.111 6.08e-05   0.0
+    genblk1[3].BB (bit_brick_108)      2.21e-05 3.43e-05    2.086 5.85e-05   0.0
+    genblk1[2].BB (bit_brick_109)      2.16e-05 3.29e-05    2.086 5.66e-05   0.0
+    genblk1[1].BB (bit_brick_110)      2.04e-05 3.22e-05    2.086 5.47e-05   0.0
+    genblk1[0].BB (bit_brick_111)      2.24e-05 3.61e-05    2.086 6.05e-05   0.0
+  genblk1[2].genblk1[1].wmux (w_mux_6) 1.79e-03 2.50e-02   11.761 2.68e-02   1.5
+  genblk1[2].genblk1[1].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_6)
+                                       8.52e-04 2.38e-02    6.305 2.47e-02   1.4
+  genblk1[2].genblk1[0].genblk1.genblk1.fu (fusion_unit_7)
+                                       2.01e-03 3.48e-03  174.216 5.67e-03   0.3
+    add_53 (fusion_unit_7_DW01_add_0_DW01_add_11)
+                                       2.28e-05 3.25e-04   11.599 3.59e-04   0.0
+    shift_add (shift_add_7)            1.61e-03 2.57e-03  129.036 4.31e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_7_DW01_add_0_DW01_add_110)
+                                       2.21e-05 2.10e-04   11.603 2.44e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_7_DW01_add_1_DW01_add_111)
+                                       3.06e-05 2.05e-04   11.601 2.47e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_7_DW01_add_2_DW01_add_112)
+                                       2.09e-05 2.07e-04   11.602 2.39e-04   0.0
+      add_6_root_add_199_I16 (shift_add_7_DW01_add_3_DW01_add_113)
+                                       2.39e-05 1.23e-04    8.893 1.56e-04   0.0
+      add_5_root_add_199_I16 (shift_add_7_DW01_add_4_DW01_add_114)
+                                       1.67e-05 1.64e-04   11.457 1.92e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_7_DW01_add_5_DW01_add_115)
+                                       1.84e-05 1.84e-04   11.540 2.14e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_7_DW01_add_6_DW01_add_116)
+                                       2.74e-05 1.89e-04   11.601 2.28e-04   0.0
+      add_7_root_add_199_I16 (shift_add_7_DW01_add_14_DW01_add_124)
+                                       2.33e-05 8.27e-05    6.624 1.13e-04   0.0
+    genblk1[15].BB (bit_brick_112)     2.53e-05 3.87e-05    2.111 6.61e-05   0.0
+    genblk1[14].BB (bit_brick_113)     2.40e-05 3.72e-05    2.111 6.33e-05   0.0
+    genblk1[13].BB (bit_brick_114)     2.39e-05 3.68e-05    2.111 6.27e-05   0.0
+    genblk1[12].BB (bit_brick_115)     2.54e-05 3.90e-05    2.111 6.65e-05   0.0
+    genblk1[11].BB (bit_brick_116)     2.38e-05 3.75e-05    2.086 6.34e-05   0.0
+    genblk1[10].BB (bit_brick_117)     2.32e-05 3.72e-05    2.086 6.25e-05   0.0
+    genblk1[9].BB (bit_brick_118)      2.32e-05 3.53e-05    2.086 6.06e-05   0.0
+    genblk1[8].BB (bit_brick_119)      2.43e-05 3.84e-05    2.086 6.48e-05   0.0
+    genblk1[7].BB (bit_brick_120)      2.36e-05 3.57e-05    2.111 6.14e-05   0.0
+    genblk1[6].BB (bit_brick_121)      2.23e-05 3.42e-05    2.111 5.86e-05   0.0
+    genblk1[5].BB (bit_brick_122)      2.33e-05 3.71e-05    2.111 6.25e-05   0.0
+    genblk1[4].BB (bit_brick_123)      2.41e-05 3.68e-05    2.111 6.31e-05   0.0
+    genblk1[3].BB (bit_brick_124)      2.39e-05 3.69e-05    2.087 6.29e-05   0.0
+    genblk1[2].BB (bit_brick_125)      2.34e-05 3.63e-05    2.086 6.18e-05   0.0
+    genblk1[1].BB (bit_brick_126)      2.18e-05 3.60e-05    2.086 5.99e-05   0.0
+    genblk1[0].BB (bit_brick_127)      2.29e-05 3.68e-05    2.087 6.18e-05   0.0
+  genblk1[2].genblk1[0].genblk1.imux (in_mux_1)
+                                       1.80e-03 2.49e-02   11.754 2.67e-02   1.5
+  genblk1[2].genblk1[0].genblk1.IBUFs (IBUF_ARRAY_SIZE4_DATA_W32_1)
+                                       8.51e-04 2.38e-02    6.305 2.47e-02   1.4
+  genblk1[2].genblk1[0].wmux (w_mux_7) 1.83e-03 2.51e-02   11.771 2.69e-02   1.5
+  genblk1[2].genblk1[0].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_7)
+                                       8.52e-04 2.38e-02    6.309 2.47e-02   1.4
+  genblk1[1].genblk1[3].genblk1.genblk1.fu (fusion_unit_8)
+                                       1.85e-03 2.85e-03  173.275 4.87e-03   0.3
+    add_53 (fusion_unit_8_DW01_add_0_DW01_add_12)
+                                       1.34e-05 1.93e-04   11.597 2.18e-04   0.0
+    shift_add (shift_add_8)            1.51e-03 2.15e-03  128.108 3.80e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_8_DW01_add_0_DW01_add_95)
+                                       1.52e-05 1.45e-04   11.601 1.72e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_8_DW01_add_1_DW01_add_96)
+                                       2.27e-05 1.49e-04   11.947 1.84e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_8_DW01_add_2_DW01_add_97)
+                                       1.63e-05 1.56e-04   11.601 1.84e-04   0.0
+      add_6_root_add_199_I16 (shift_add_8_DW01_add_3_DW01_add_98)
+                                       1.64e-05 8.70e-05    8.272 1.12e-04   0.0
+      add_5_root_add_199_I16 (shift_add_8_DW01_add_4_DW01_add_99)
+                                       1.31e-05 1.26e-04   11.225 1.50e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_8_DW01_add_5_DW01_add_100)
+                                       1.29e-05 1.25e-04   11.539 1.50e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_8_DW01_add_6_DW01_add_101)
+                                       2.07e-05 1.41e-04   11.600 1.73e-04   0.0
+      add_7_root_add_199_I16 (shift_add_8_DW01_add_14_DW01_add_109)
+                                       1.72e-05 6.28e-05    6.624 8.66e-05   0.0
+    genblk1[15].BB (bit_brick_128)     2.17e-05 3.27e-05    2.110 5.65e-05   0.0
+    genblk1[14].BB (bit_brick_129)     2.04e-05 3.12e-05    2.110 5.37e-05   0.0
+    genblk1[13].BB (bit_brick_130)     2.12e-05 3.27e-05    2.110 5.60e-05   0.0
+    genblk1[12].BB (bit_brick_131)     2.10e-05 3.22e-05    2.110 5.53e-05   0.0
+    genblk1[11].BB (bit_brick_132)     2.01e-05 3.11e-05    2.086 5.33e-05   0.0
+    genblk1[10].BB (bit_brick_133)     1.97e-05 3.09e-05    2.086 5.27e-05   0.0
+    genblk1[9].BB (bit_brick_134)      2.00e-05 3.03e-05    2.086 5.24e-05   0.0
+    genblk1[8].BB (bit_brick_135)      1.93e-05 2.94e-05    2.086 5.08e-05   0.0
+    genblk1[7].BB (bit_brick_136)      2.04e-05 3.14e-05    2.110 5.40e-05   0.0
+    genblk1[6].BB (bit_brick_137)      2.00e-05 3.09e-05    2.110 5.30e-05   0.0
+    genblk1[5].BB (bit_brick_138)      2.05e-05 3.27e-05    2.110 5.53e-05   0.0
+    genblk1[4].BB (bit_brick_139)      1.94e-05 2.95e-05    2.110 5.11e-05   0.0
+    genblk1[3].BB (bit_brick_140)      2.09e-05 3.31e-05    2.086 5.61e-05   0.0
+    genblk1[2].BB (bit_brick_141)      2.00e-05 3.12e-05    2.086 5.33e-05   0.0
+    genblk1[1].BB (bit_brick_142)      1.90e-05 3.03e-05    2.086 5.14e-05   0.0
+    genblk1[0].BB (bit_brick_143)      1.93e-05 3.09e-05    2.086 5.23e-05   0.0
+  genblk1[1].genblk1[3].wmux (w_mux_8) 1.81e-03 2.50e-02   11.767 2.69e-02   1.5
+  genblk1[1].genblk1[3].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_8)
+                                       8.55e-04 2.38e-02    6.307 2.47e-02   1.4
+  genblk1[1].genblk1[2].genblk1.genblk1.fu (fusion_unit_9)
+                                       1.90e-03 3.01e-03  174.125 5.08e-03   0.3
+    add_53 (fusion_unit_9_DW01_add_0_DW01_add_13)
+                                       1.30e-05 1.81e-04   11.596 2.06e-04   0.0
+    shift_add (shift_add_9)            1.54e-03 2.29e-03  128.956 3.97e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_9_DW01_add_0_DW01_add_80)
+                                       1.79e-05 1.67e-04   11.601 1.97e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_9_DW01_add_1_DW01_add_81)
+                                       2.37e-05 1.59e-04   11.601 1.95e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_9_DW01_add_2_DW01_add_82)
+                                       1.64e-05 1.59e-04   11.601 1.87e-04   0.0
+      add_6_root_add_199_I16 (shift_add_9_DW01_add_3_DW01_add_83)
+                                       2.18e-05 1.09e-04    9.760 1.41e-04   0.0
+      add_5_root_add_199_I16 (shift_add_9_DW01_add_4_DW01_add_84)
+                                       1.49e-05 1.47e-04   11.226 1.73e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_9_DW01_add_5_DW01_add_85)
+                                       1.58e-05 1.60e-04   11.539 1.87e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_9_DW01_add_6_DW01_add_86)
+                                       2.02e-05 1.38e-04   11.600 1.70e-04   0.0
+      add_7_root_add_199_I16 (shift_add_9_DW01_add_14_DW01_add_94)
+                                       1.81e-05 6.53e-05    6.636 9.00e-05   0.0
+    genblk1[15].BB (bit_brick_144)     2.31e-05 3.45e-05    2.111 5.97e-05   0.0
+    genblk1[14].BB (bit_brick_145)     2.14e-05 3.24e-05    2.110 5.60e-05   0.0
+    genblk1[13].BB (bit_brick_146)     2.18e-05 3.31e-05    2.111 5.70e-05   0.0
+    genblk1[12].BB (bit_brick_147)     2.20e-05 3.34e-05    2.111 5.75e-05   0.0
+    genblk1[11].BB (bit_brick_148)     2.13e-05 3.30e-05    2.086 5.64e-05   0.0
+    genblk1[10].BB (bit_brick_149)     2.12e-05 3.38e-05    2.086 5.71e-05   0.0
+    genblk1[9].BB (bit_brick_150)      2.05e-05 3.18e-05    2.086 5.43e-05   0.0
+    genblk1[8].BB (bit_brick_151)      2.12e-05 3.31e-05    2.086 5.64e-05   0.0
+    genblk1[7].BB (bit_brick_152)      2.23e-05 3.38e-05    2.111 5.82e-05   0.0
+    genblk1[6].BB (bit_brick_153)      2.17e-05 3.38e-05    2.110 5.76e-05   0.0
+    genblk1[5].BB (bit_brick_154)      2.10e-05 3.28e-05    2.110 5.58e-05   0.0
+    genblk1[4].BB (bit_brick_155)      2.19e-05 3.33e-05    2.110 5.73e-05   0.0
+    genblk1[3].BB (bit_brick_156)      2.26e-05 3.54e-05    2.086 6.01e-05   0.0
+    genblk1[2].BB (bit_brick_157)      2.17e-05 3.31e-05    2.086 5.69e-05   0.0
+    genblk1[1].BB (bit_brick_158)      2.05e-05 3.40e-05    2.086 5.66e-05   0.0
+    genblk1[0].BB (bit_brick_159)      2.04e-05 3.15e-05    2.086 5.39e-05   0.0
+  genblk1[1].genblk1[2].wmux (w_mux_9) 1.80e-03 2.50e-02   11.766 2.68e-02   1.5
+  genblk1[1].genblk1[2].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_9)
+                                       8.55e-04 2.38e-02    6.308 2.47e-02   1.4
+  genblk1[1].genblk1[1].genblk1.genblk1.fu (fusion_unit_10)
+                                       1.96e-03 3.21e-03  174.477 5.34e-03   0.3
+    add_53 (fusion_unit_10_DW01_add_0_DW01_add_14)
+                                       1.55e-05 2.19e-04   11.597 2.46e-04   0.0
+    shift_add (shift_add_10)           1.58e-03 2.43e-03  129.302 4.14e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_10_DW01_add_0_DW01_add_65)
+                                       1.94e-05 1.82e-04   11.602 2.13e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_10_DW01_add_1_DW01_add_66)
+                                       2.84e-05 1.82e-04   12.641 2.23e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_10_DW01_add_2_DW01_add_67)
+                                       2.01e-05 1.81e-04   11.601 2.13e-04   0.0
+      add_6_root_add_199_I16 (shift_add_10_DW01_add_3_DW01_add_68)
+                                       2.14e-05 1.10e-04    8.501 1.40e-04   0.0
+      add_5_root_add_199_I16 (shift_add_10_DW01_add_4_DW01_add_69)
+                                       1.60e-05 1.57e-04   11.226 1.84e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_10_DW01_add_5_DW01_add_70)
+                                       1.63e-05 1.64e-04   11.539 1.92e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_10_DW01_add_6_DW01_add_71)
+                                       2.19e-05 1.49e-04   11.600 1.82e-04   0.0
+      add_7_root_add_199_I16 (shift_add_10_DW01_add_14_DW01_add_79)
+                                       1.93e-05 6.69e-05    6.564 9.28e-05   0.0
+    genblk1[15].BB (bit_brick_160)     2.35e-05 3.50e-05    2.111 6.06e-05   0.0
+    genblk1[14].BB (bit_brick_161)     2.41e-05 3.53e-05    2.111 6.15e-05   0.0
+    genblk1[13].BB (bit_brick_162)     2.33e-05 3.57e-05    2.111 6.12e-05   0.0
+    genblk1[12].BB (bit_brick_163)     2.32e-05 3.51e-05    2.111 6.04e-05   0.0
+    genblk1[11].BB (bit_brick_164)     2.30e-05 3.56e-05    2.086 6.07e-05   0.0
+    genblk1[10].BB (bit_brick_165)     2.24e-05 3.48e-05    2.086 5.92e-05   0.0
+    genblk1[9].BB (bit_brick_166)      2.16e-05 3.31e-05    2.086 5.67e-05   0.0
+    genblk1[8].BB (bit_brick_167)      2.20e-05 3.36e-05    2.086 5.77e-05   0.0
+    genblk1[7].BB (bit_brick_168)      2.34e-05 3.61e-05    2.111 6.17e-05   0.0
+    genblk1[6].BB (bit_brick_169)      2.32e-05 3.40e-05    2.111 5.93e-05   0.0
+    genblk1[5].BB (bit_brick_170)      2.28e-05 3.58e-05    2.111 6.07e-05   0.0
+    genblk1[4].BB (bit_brick_171)      2.39e-05 3.79e-05    2.111 6.39e-05   0.0
+    genblk1[3].BB (bit_brick_172)      2.30e-05 3.50e-05    2.086 6.01e-05   0.0
+    genblk1[2].BB (bit_brick_173)      2.26e-05 3.44e-05    2.086 5.91e-05   0.0
+    genblk1[1].BB (bit_brick_174)      2.11e-05 3.40e-05    2.086 5.71e-05   0.0
+    genblk1[0].BB (bit_brick_175)      2.20e-05 3.45e-05    2.086 5.86e-05   0.0
+  genblk1[1].genblk1[1].wmux (w_mux_10)
+                                       1.78e-03 2.50e-02   11.758 2.68e-02   1.5
+  genblk1[1].genblk1[1].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_10)
+                                       8.50e-04 2.38e-02    6.305 2.47e-02   1.4
+  genblk1[1].genblk1[0].genblk1.genblk1.fu (fusion_unit_11)
+                                       1.98e-03 3.27e-03  173.334 5.42e-03   0.3
+    add_53 (fusion_unit_11_DW01_add_0_DW01_add_15)
+                                       1.60e-05 2.27e-04   11.596 2.55e-04   0.0
+    shift_add (shift_add_11)           1.59e-03 2.47e-03  128.157 4.18e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_11_DW01_add_0_DW01_add_50)
+                                       2.04e-05 1.93e-04   11.603 2.25e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_11_DW01_add_1_DW01_add_51)
+                                       2.81e-05 1.90e-04   11.602 2.29e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_11_DW01_add_2_DW01_add_52)
+                                       1.91e-05 1.90e-04   11.601 2.21e-04   0.0
+      add_6_root_add_199_I16 (shift_add_11_DW01_add_3_DW01_add_53)
+                                       2.35e-05 1.21e-04    8.894 1.53e-04   0.0
+      add_5_root_add_199_I16 (shift_add_11_DW01_add_4_DW01_add_54)
+                                       1.62e-05 1.61e-04   11.226 1.89e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_11_DW01_add_5_DW01_add_55)
+                                       1.68e-05 1.68e-04   11.539 1.96e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_11_DW01_add_6_DW01_add_56)
+                                       2.41e-05 1.64e-04   11.600 2.00e-04   0.0
+      add_7_root_add_199_I16 (shift_add_11_DW01_add_14_DW01_add_64)
+                                       2.03e-05 7.08e-05    6.624 9.77e-05   0.0
+    genblk1[15].BB (bit_brick_176)     2.45e-05 3.63e-05    2.111 6.29e-05   0.0
+    genblk1[14].BB (bit_brick_177)     2.39e-05 3.65e-05    2.111 6.25e-05   0.0
+    genblk1[13].BB (bit_brick_178)     2.37e-05 3.60e-05    2.111 6.18e-05   0.0
+    genblk1[12].BB (bit_brick_179)     2.42e-05 3.64e-05    2.111 6.27e-05   0.0
+    genblk1[11].BB (bit_brick_180)     2.33e-05 3.61e-05    2.086 6.15e-05   0.0
+    genblk1[10].BB (bit_brick_181)     2.29e-05 3.60e-05    2.086 6.09e-05   0.0
+    genblk1[9].BB (bit_brick_182)      2.31e-05 3.49e-05    2.086 6.01e-05   0.0
+    genblk1[8].BB (bit_brick_183)      2.30e-05 3.51e-05    2.086 6.02e-05   0.0
+    genblk1[7].BB (bit_brick_184)      2.35e-05 3.58e-05    2.111 6.14e-05   0.0
+    genblk1[6].BB (bit_brick_185)      2.24e-05 3.41e-05    2.111 5.86e-05   0.0
+    genblk1[5].BB (bit_brick_186)      2.35e-05 3.69e-05    2.111 6.25e-05   0.0
+    genblk1[4].BB (bit_brick_187)      2.38e-05 3.62e-05    2.111 6.22e-05   0.0
+    genblk1[3].BB (bit_brick_188)      2.41e-05 3.72e-05    2.087 6.33e-05   0.0
+    genblk1[2].BB (bit_brick_189)      2.30e-05 3.52e-05    2.086 6.02e-05   0.0
+    genblk1[1].BB (bit_brick_190)      2.21e-05 3.55e-05    2.086 5.97e-05   0.0
+    genblk1[0].BB (bit_brick_191)      2.24e-05 3.49e-05    2.086 5.94e-05   0.0
+  genblk1[1].genblk1[0].genblk1.imux (in_mux_2)
+                                       1.81e-03 2.50e-02   11.753 2.68e-02   1.5
+  genblk1[1].genblk1[0].genblk1.IBUFs (IBUF_ARRAY_SIZE4_DATA_W32_2)
+                                       8.48e-04 2.38e-02    6.303 2.47e-02   1.4
+  genblk1[1].genblk1[0].wmux (w_mux_11)
+                                       1.81e-03 2.50e-02   11.764 2.69e-02   1.5
+  genblk1[1].genblk1[0].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_11)
+                                       8.55e-04 2.38e-02    6.307 2.47e-02   1.4
+  genblk1[0].genblk1[3].genblk1.genblk1.fu (fusion_unit_12)
+                                       1.86e-03 2.83e-03  172.204 4.86e-03   0.3
+    add_53 (fusion_unit_12_DW01_add_0_DW01_add_16)
+                                       7.67e-06 1.03e-04   11.448 1.22e-04   0.0
+    shift_add (shift_add_12)           1.52e-03 2.22e-03  127.207 3.87e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_12_DW01_add_0_DW01_add_35)
+                                       1.59e-05 1.52e-04   11.601 1.80e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_12_DW01_add_1_DW01_add_36)
+                                       2.26e-05 1.51e-04   11.539 1.86e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_12_DW01_add_2_DW01_add_37)
+                                       1.65e-05 1.63e-04   11.601 1.91e-04   0.0
+      add_6_root_add_199_I16 (shift_add_12_DW01_add_3_DW01_add_38)
+                                       1.89e-05 9.56e-05    8.795 1.23e-04   0.0
+      add_5_root_add_199_I16 (shift_add_12_DW01_add_4_DW01_add_39)
+                                       1.38e-05 1.33e-04   11.226 1.58e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_12_DW01_add_5_DW01_add_40)
+                                       1.53e-05 1.51e-04   11.539 1.78e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_12_DW01_add_6_DW01_add_41)
+                                       2.22e-05 1.52e-04   11.600 1.85e-04   0.0
+      add_7_root_add_199_I16 (shift_add_12_DW01_add_14_DW01_add_49)
+                                       1.91e-05 6.64e-05    6.457 9.20e-05   0.0
+    genblk1[15].BB (bit_brick_192)     2.06e-05 3.12e-05    2.110 5.39e-05   0.0
+    genblk1[14].BB (bit_brick_193)     2.15e-05 3.27e-05    2.110 5.63e-05   0.0
+    genblk1[13].BB (bit_brick_194)     2.06e-05 3.20e-05    2.110 5.47e-05   0.0
+    genblk1[12].BB (bit_brick_195)     2.04e-05 3.17e-05    2.090 5.42e-05   0.0
+    genblk1[11].BB (bit_brick_196)     1.98e-05 3.07e-05    2.086 5.26e-05   0.0
+    genblk1[10].BB (bit_brick_197)     2.04e-05 3.27e-05    2.086 5.53e-05   0.0
+    genblk1[9].BB (bit_brick_198)      2.10e-05 3.29e-05    2.086 5.59e-05   0.0
+    genblk1[8].BB (bit_brick_199)      2.00e-05 3.12e-05    2.086 5.33e-05   0.0
+    genblk1[7].BB (bit_brick_200)      2.12e-05 3.23e-05    2.110 5.56e-05   0.0
+    genblk1[6].BB (bit_brick_201)      2.11e-05 3.13e-05    2.110 5.45e-05   0.0
+    genblk1[5].BB (bit_brick_202)      2.05e-05 3.28e-05    2.110 5.54e-05   0.0
+    genblk1[4].BB (bit_brick_203)      2.03e-05 3.06e-05    2.110 5.31e-05   0.0
+    genblk1[3].BB (bit_brick_204)      2.07e-05 3.30e-05    2.086 5.58e-05   0.0
+    genblk1[2].BB (bit_brick_205)      2.04e-05 3.29e-05    2.086 5.54e-05   0.0
+    genblk1[1].BB (bit_brick_206)      1.91e-05 3.11e-05    2.086 5.22e-05   0.0
+    genblk1[0].BB (bit_brick_207)      1.92e-05 3.05e-05    2.086 5.18e-05   0.0
+  genblk1[0].genblk1[3].wmux (w_mux_12)
+                                       1.78e-03 2.50e-02   11.755 2.68e-02   1.5
+  genblk1[0].genblk1[3].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_12)
+                                       8.48e-04 2.38e-02    6.303 2.47e-02   1.4
+  genblk1[0].genblk1[2].genblk1.genblk1.fu (fusion_unit_13)
+                                       1.80e-03 2.54e-03  174.516 4.51e-03   0.2
+    add_53 (fusion_unit_13_DW01_add_0_DW01_add_17)
+                                       6.89e-06 9.28e-05   11.449 1.11e-04   0.0
+    shift_add (shift_add_13)           1.47e-03 1.97e-03  129.518 3.57e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_13_DW01_add_0_DW01_add_20)
+                                       1.36e-05 1.34e-04   11.600 1.59e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_13_DW01_add_1_DW01_add_21)
+                                       2.18e-05 1.39e-04   12.579 1.74e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_13_DW01_add_2_DW01_add_22)
+                                       1.68e-05 1.49e-04   11.600 1.77e-04   0.0
+      add_6_root_add_199_I16 (shift_add_13_DW01_add_3_DW01_add_23)
+                                       1.61e-05 8.22e-05    8.625 1.07e-04   0.0
+      add_5_root_add_199_I16 (shift_add_13_DW01_add_4_DW01_add_24)
+                                       1.34e-05 1.34e-04   11.226 1.58e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_13_DW01_add_5_DW01_add_25)
+                                       1.12e-05 1.12e-04   11.538 1.34e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_13_DW01_add_6_DW01_add_26)
+                                       1.82e-05 1.22e-04   11.946 1.52e-04   0.0
+      add_7_root_add_199_I16 (shift_add_13_DW01_add_14_DW01_add_34)
+                                       1.48e-05 5.24e-05    6.636 7.38e-05   0.0
+    genblk1[15].BB (bit_brick_208)     2.13e-05 3.08e-05    2.110 5.43e-05   0.0
+    genblk1[14].BB (bit_brick_209)     1.97e-05 2.85e-05    2.110 5.03e-05   0.0
+    genblk1[13].BB (bit_brick_210)     2.02e-05 3.03e-05    2.110 5.26e-05   0.0
+    genblk1[12].BB (bit_brick_211)     2.02e-05 3.01e-05    2.090 5.24e-05   0.0
+    genblk1[11].BB (bit_brick_212)     2.00e-05 2.97e-05    2.086 5.18e-05   0.0
+    genblk1[10].BB (bit_brick_213)     1.90e-05 2.80e-05    2.086 4.90e-05   0.0
+    genblk1[9].BB (bit_brick_214)      1.96e-05 2.85e-05    2.086 5.02e-05   0.0
+    genblk1[8].BB (bit_brick_215)      1.98e-05 2.96e-05    2.086 5.15e-05   0.0
+    genblk1[7].BB (bit_brick_216)      2.15e-05 3.24e-05    2.110 5.59e-05   0.0
+    genblk1[6].BB (bit_brick_217)      2.06e-05 2.95e-05    2.110 5.22e-05   0.0
+    genblk1[5].BB (bit_brick_218)      2.02e-05 3.07e-05    2.110 5.30e-05   0.0
+    genblk1[4].BB (bit_brick_219)      2.15e-05 3.10e-05    2.110 5.46e-05   0.0
+    genblk1[3].BB (bit_brick_220)      2.10e-05 3.15e-05    2.086 5.46e-05   0.0
+    genblk1[2].BB (bit_brick_221)      1.90e-05 2.80e-05    2.086 4.91e-05   0.0
+    genblk1[1].BB (bit_brick_222)      1.90e-05 2.96e-05    2.086 5.07e-05   0.0
+    genblk1[0].BB (bit_brick_223)      1.99e-05 3.09e-05    2.086 5.29e-05   0.0
+  genblk1[0].genblk1[2].wmux (w_mux_13)
+                                       1.76e-03 2.49e-02   11.752 2.67e-02   1.5
+  genblk1[0].genblk1[2].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_13)
+                                       8.48e-04 2.38e-02    6.305 2.47e-02   1.4
+  genblk1[0].genblk1[1].genblk1.genblk1.fu (fusion_unit_14)
+                                       1.92e-03 3.00e-03  172.283 5.09e-03   0.3
+    add_53 (fusion_unit_14_DW01_add_0_DW01_add_18)
+                                       8.84e-06 1.19e-04   11.448 1.39e-04   0.0
+    shift_add (shift_add_14)           1.54e-03 2.32e-03  127.276 4.00e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_14_DW01_add_0_DW01_add_230)
+                                       1.78e-05 1.73e-04   11.602 2.02e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_14_DW01_add_1_DW01_add_231)
+                                       2.54e-05 1.71e-04   11.540 2.08e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_14_DW01_add_2_DW01_add_232)
+                                       1.77e-05 1.73e-04   11.600 2.02e-04   0.0
+      add_6_root_add_199_I16 (shift_add_14_DW01_add_3_DW01_add_233)
+                                       2.23e-05 1.13e-04    8.448 1.44e-04   0.0
+      add_5_root_add_199_I16 (shift_add_14_DW01_add_4_DW01_add_234)
+                                       1.66e-05 1.65e-04   11.226 1.93e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_14_DW01_add_5_DW01_add_235)
+                                       1.55e-05 1.53e-04   11.539 1.80e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_14_DW01_add_6_DW01_add_236)
+                                       2.05e-05 1.39e-04   11.600 1.71e-04   0.0
+      add_7_root_add_199_I16 (shift_add_14_DW01_add_14_DW01_add_244)
+                                       1.78e-05 6.08e-05    6.456 8.50e-05   0.0
+    genblk1[15].BB (bit_brick_224)     2.28e-05 3.36e-05    2.111 5.85e-05   0.0
+    genblk1[14].BB (bit_brick_225)     2.32e-05 3.43e-05    2.111 5.97e-05   0.0
+    genblk1[13].BB (bit_brick_226)     2.24e-05 3.36e-05    2.111 5.82e-05   0.0
+    genblk1[12].BB (bit_brick_227)     2.27e-05 3.41e-05    2.090 5.89e-05   0.0
+    genblk1[11].BB (bit_brick_228)     2.23e-05 3.40e-05    2.086 5.84e-05   0.0
+    genblk1[10].BB (bit_brick_229)     2.22e-05 3.45e-05    2.086 5.88e-05   0.0
+    genblk1[9].BB (bit_brick_230)      2.25e-05 3.38e-05    2.086 5.83e-05   0.0
+    genblk1[8].BB (bit_brick_231)      2.27e-05 3.47e-05    2.086 5.94e-05   0.0
+    genblk1[7].BB (bit_brick_232)      2.40e-05 3.63e-05    2.111 6.24e-05   0.0
+    genblk1[6].BB (bit_brick_233)      2.41e-05 3.55e-05    2.111 6.17e-05   0.0
+    genblk1[5].BB (bit_brick_234)      2.26e-05 3.50e-05    2.111 5.98e-05   0.0
+    genblk1[4].BB (bit_brick_235)      2.42e-05 3.67e-05    2.111 6.30e-05   0.0
+    genblk1[3].BB (bit_brick_236)      2.34e-05 3.70e-05    2.087 6.26e-05   0.0
+    genblk1[2].BB (bit_brick_237)      2.21e-05 3.41e-05    2.086 5.83e-05   0.0
+    genblk1[1].BB (bit_brick_238)      2.10e-05 3.33e-05    2.086 5.64e-05   0.0
+    genblk1[0].BB (bit_brick_239)      2.22e-05 3.48e-05    2.086 5.91e-05   0.0
+  genblk1[0].genblk1[1].wmux (w_mux_14)
+                                       1.78e-03 2.50e-02   11.761 2.68e-02   1.5
+  genblk1[0].genblk1[1].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_14)
+                                       8.45e-04 2.38e-02    6.305 2.47e-02   1.4
+  genblk1[0].genblk1[0].genblk1.genblk1.fu (fusion_unit_15)
+                                       1.91e-03 2.94e-03  172.671 5.02e-03   0.3
+    add_53 (fusion_unit_15_DW01_add_0_DW01_add_19)
+                                       8.48e-06 1.14e-04   11.448 1.34e-04   0.0
+    shift_add (shift_add_15)           1.55e-03 2.29e-03  127.667 3.96e-03   0.2
+      add_0_root_add_0_root_add_199_I16 (shift_add_15_DW01_add_0_DW01_add_245)
+                                       1.69e-05 1.65e-04   11.601 1.93e-04   0.0
+      add_1_root_add_0_root_add_199_I16 (shift_add_15_DW01_add_1_DW01_add_246)
+                                       2.62e-05 1.74e-04   11.714 2.12e-04   0.0
+      add_2_root_add_0_root_add_199_I16 (shift_add_15_DW01_add_2_DW01_add_247)
+                                       1.80e-05 1.77e-04   11.601 2.06e-04   0.0
+      add_6_root_add_199_I16 (shift_add_15_DW01_add_3_DW01_add_248)
+                                       2.11e-05 1.08e-04    8.471 1.38e-04   0.0
+      add_5_root_add_199_I16 (shift_add_15_DW01_add_4_DW01_add_249)
+                                       1.47e-05 1.47e-04   11.226 1.73e-04   0.0
+      add_3_root_add_0_root_add_199_I16 (shift_add_15_DW01_add_5_DW01_add_250)
+                                       1.38e-05 1.38e-04   11.539 1.63e-04   0.0
+      add_4_root_add_0_root_add_199_I16 (shift_add_15_DW01_add_6_DW01_add_251)
+                                       2.15e-05 1.46e-04   11.773 1.80e-04   0.0
+      add_7_root_add_199_I16 (shift_add_15_DW01_add_14_DW01_add_259)
+                                       1.72e-05 5.91e-05    6.258 8.25e-05   0.0
+    genblk1[15].BB (bit_brick_240)     2.19e-05 3.21e-05    2.111 5.62e-05   0.0
+    genblk1[14].BB (bit_brick_241)     2.28e-05 3.45e-05    2.111 5.94e-05   0.0
+    genblk1[13].BB (bit_brick_242)     2.21e-05 3.27e-05    2.110 5.70e-05   0.0
+    genblk1[12].BB (bit_brick_243)     2.24e-05 3.41e-05    2.090 5.85e-05   0.0
+    genblk1[11].BB (bit_brick_244)     2.13e-05 3.19e-05    2.086 5.53e-05   0.0
+    genblk1[10].BB (bit_brick_245)     2.14e-05 3.26e-05    2.086 5.60e-05   0.0
+    genblk1[9].BB (bit_brick_246)      2.12e-05 3.23e-05    2.086 5.56e-05   0.0
+    genblk1[8].BB (bit_brick_247)      2.12e-05 3.21e-05    2.086 5.54e-05   0.0
+    genblk1[7].BB (bit_brick_248)      2.26e-05 3.34e-05    2.111 5.82e-05   0.0
+    genblk1[6].BB (bit_brick_249)      2.20e-05 3.36e-05    2.111 5.77e-05   0.0
+    genblk1[5].BB (bit_brick_250)      2.18e-05 3.33e-05    2.111 5.72e-05   0.0
+    genblk1[4].BB (bit_brick_251)      2.29e-05 3.50e-05    2.111 6.01e-05   0.0
+    genblk1[3].BB (bit_brick_252)      2.24e-05 3.47e-05    2.086 5.91e-05   0.0
+    genblk1[2].BB (bit_brick_253)      2.18e-05 3.41e-05    2.086 5.80e-05   0.0
+    genblk1[1].BB (bit_brick_254)      2.09e-05 3.35e-05    2.086 5.65e-05   0.0
+    genblk1[0].BB (bit_brick_255)      2.17e-05 3.43e-05    2.086 5.80e-05   0.0
+  genblk1[0].genblk1[0].genblk1.imux (in_mux_3)
+                                       1.81e-03 2.49e-02   11.758 2.68e-02   1.5
+  genblk1[0].genblk1[0].genblk1.IBUFs (IBUF_ARRAY_SIZE4_DATA_W32_3)
+                                       8.46e-04 2.38e-02    6.306 2.47e-02   1.4
+  genblk1[0].genblk1[0].wmux (w_mux_15)
+                                       1.77e-03 2.49e-02   11.758 2.67e-02   1.5
+  genblk1[0].genblk1[0].WBUFs (WBUF_ARRAY_SIZE4_DATA_W32_15)
+                                       8.53e-04 2.38e-02    6.305 2.47e-02   1.4
+1
